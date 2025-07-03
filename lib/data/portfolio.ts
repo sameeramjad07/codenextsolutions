@@ -1,0 +1,328 @@
+export const portfolioData = {
+  hero: {
+    title: "Our Portfolio",
+    subtitle: "Transforming Ideas Into Digital Reality",
+    description:
+      "Explore our journey of innovation through carefully crafted digital solutions that have transformed businesses across industries.",
+    stats: [
+      { number: "200+", label: "Projects Completed" },
+      { number: "50+", label: "Happy Clients" },
+      { number: "15+", label: "Industries Served" },
+      { number: "99.9%", label: "Success Rate" },
+    ],
+  },
+  timeline: {
+    title: "Our Journey Through Innovation",
+    subtitle: "A timeline of breakthrough projects that shaped our expertise",
+    projects: [
+      {
+        id: "healthtech-platform",
+        year: "2024",
+        title: "HealthTech Revolution",
+        client: "MedTech Solutions",
+        category: "Healthcare",
+        description:
+          "Revolutionary telemedicine platform serving 50,000+ patients with AI-powered diagnostics and real-time consultation features.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: ["React", "Node.js", "AI/ML", "AWS", "WebRTC"],
+        results: [
+          "50,000+ active patients",
+          "40% reduction in wait times",
+          "99.9% uptime achieved",
+          "HIPAA compliance certified",
+        ],
+        theme: {
+          primary: "from-emerald-500 to-teal-600",
+          secondary: "bg-emerald-50",
+          accent: "text-emerald-600",
+        },
+        features: [
+          "AI-powered symptom checker",
+          "Real-time video consultations",
+          "Electronic health records",
+          "Prescription management",
+          "Insurance integration",
+        ],
+      },
+      {
+        id: "fintech-platform",
+        year: "2023",
+        title: "FinTech Innovation",
+        client: "InvestPro",
+        category: "Finance",
+        description:
+          "Next-generation trading platform with real-time analytics, automated trading algorithms, and comprehensive portfolio management.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: ["Vue.js", "Python", "PostgreSQL", "Redis", "Docker"],
+        results: [
+          "$2M+ daily trading volume",
+          "Sub-second execution time",
+          "500% user growth",
+          "99.99% transaction accuracy",
+        ],
+        theme: {
+          primary: "from-blue-500 to-indigo-600",
+          secondary: "bg-blue-50",
+          accent: "text-blue-600",
+        },
+        features: [
+          "Real-time market data",
+          "Advanced charting tools",
+          "Automated trading bots",
+          "Risk management system",
+          "Multi-asset support",
+        ],
+      },
+      {
+        id: "ecommerce-platform",
+        year: "2023",
+        title: "E-commerce Transformation",
+        client: "RetailMax",
+        category: "E-commerce",
+        description:
+          "Multi-vendor marketplace with AI-powered recommendations, advanced analytics, and seamless payment integration.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: [
+          "Next.js",
+          "Shopify Plus",
+          "Stripe",
+          "MongoDB",
+          "Vercel",
+        ],
+        results: [
+          "300% increase in sales",
+          "50% reduction in cart abandonment",
+          "1M+ products listed",
+          "40+ payment methods",
+        ],
+        theme: {
+          primary: "from-purple-500 to-pink-600",
+          secondary: "bg-purple-50",
+          accent: "text-purple-600",
+        },
+        features: [
+          "Multi-vendor marketplace",
+          "AI product recommendations",
+          "Advanced search & filters",
+          "Inventory management",
+          "Analytics dashboard",
+        ],
+      },
+      {
+        id: "education-platform",
+        year: "2022",
+        title: "EdTech Innovation",
+        client: "EduTech Academy",
+        category: "Education",
+        description:
+          "Comprehensive learning management system with interactive content, progress tracking, and virtual classroom capabilities.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: ["React", "Node.js", "MongoDB", "WebRTC", "AWS"],
+        results: [
+          "10,000+ active students",
+          "95% completion rate",
+          "40% improvement in grades",
+          "24/7 platform availability",
+        ],
+        theme: {
+          primary: "from-orange-500 to-red-600",
+          secondary: "bg-orange-50",
+          accent: "text-orange-600",
+        },
+        features: [
+          "Interactive course content",
+          "Virtual classrooms",
+          "Progress tracking",
+          "Assignment management",
+          "Student analytics",
+        ],
+      },
+      {
+        id: "logistics-platform",
+        year: "2022",
+        title: "Logistics Revolution",
+        client: "LogiTrack",
+        category: "Logistics",
+        description:
+          "End-to-end supply chain management platform with real-time tracking, route optimization, and predictive analytics.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: ["Flutter", "Firebase", "Google Maps", "ML", "IoT"],
+        results: [
+          "50% faster deliveries",
+          "30% cost reduction",
+          "95% customer satisfaction",
+          "Real-time tracking",
+        ],
+        theme: {
+          primary: "from-green-500 to-emerald-600",
+          secondary: "bg-green-50",
+          accent: "text-green-600",
+        },
+        features: [
+          "Real-time GPS tracking",
+          "Route optimization",
+          "Inventory management",
+          "Predictive analytics",
+          "Mobile driver app",
+        ],
+      },
+      {
+        id: "manufacturing-iot",
+        year: "2021",
+        title: "Industrial IoT Solution",
+        client: "ManufactureTech",
+        category: "Manufacturing",
+        description:
+          "Smart manufacturing platform with IoT sensors, predictive maintenance, and real-time production monitoring.",
+        image: "/placeholder.svg?height=600&width=800",
+        technologies: ["Python", "IoT", "TensorFlow", "InfluxDB", "Grafana"],
+        results: [
+          "40% reduction in downtime",
+          "30% increase in efficiency",
+          "95% prediction accuracy",
+          "$500K annual savings",
+        ],
+        theme: {
+          primary: "from-gray-500 to-slate-600",
+          secondary: "bg-gray-50",
+          accent: "text-gray-600",
+        },
+        features: [
+          "IoT sensor integration",
+          "Predictive maintenance",
+          "Real-time monitoring",
+          "Production analytics",
+          "Quality control",
+        ],
+      },
+    ],
+  },
+  categories: [
+    {
+      id: "healthcare",
+      name: "Healthcare",
+      description: "HIPAA-compliant solutions for modern healthcare",
+      icon: "Heart",
+      count: 15,
+      color: "text-emerald-600",
+    },
+    {
+      id: "finance",
+      name: "FinTech",
+      description: "Secure financial technology solutions",
+      icon: "DollarSign",
+      count: 12,
+      color: "text-blue-600",
+    },
+    {
+      id: "ecommerce",
+      name: "E-commerce",
+      description: "Scalable online retail platforms",
+      icon: "ShoppingCart",
+      count: 18,
+      color: "text-purple-600",
+    },
+    {
+      id: "education",
+      name: "Education",
+      description: "Interactive learning management systems",
+      icon: "BookOpen",
+      count: 10,
+      color: "text-orange-600",
+    },
+    {
+      id: "logistics",
+      name: "Logistics",
+      description: "Smart supply chain solutions",
+      icon: "Truck",
+      count: 8,
+      color: "text-green-600",
+    },
+    {
+      id: "manufacturing",
+      name: "Manufacturing",
+      description: "Industrial IoT and automation",
+      icon: "Factory",
+      count: 6,
+      color: "text-gray-600",
+    },
+  ],
+  technologies: {
+    title: "Technologies We Master",
+    subtitle: "Cutting-edge tools and frameworks powering our solutions",
+    categories: [
+      {
+        name: "Frontend",
+        technologies: ["React", "Vue.js", "Angular", "Next.js", "TypeScript"],
+        color: "bg-blue-100 text-blue-800",
+      },
+      {
+        name: "Backend",
+        technologies: ["Node.js", "Python", ".NET", "Java", "PHP"],
+        color: "bg-green-100 text-green-800",
+      },
+      {
+        name: "Mobile",
+        technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
+        color: "bg-purple-100 text-purple-800",
+      },
+      {
+        name: "Cloud",
+        technologies: ["AWS", "Azure", "GCP", "Docker", "Kubernetes"],
+        color: "bg-orange-100 text-orange-800",
+      },
+      {
+        name: "Database",
+        technologies: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+        color: "bg-red-100 text-red-800",
+      },
+      {
+        name: "AI/ML",
+        technologies: ["TensorFlow", "PyTorch", "OpenAI", "Computer Vision"],
+        color: "bg-indigo-100 text-indigo-800",
+      },
+    ],
+  },
+  testimonials: [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "CTO, MedTech Solutions",
+      company: "Healthcare",
+      quote:
+        "CodeNextSolutions transformed our healthcare delivery with their innovative telemedicine platform. The AI-powered diagnostics have revolutionized patient care.",
+      image: "/placeholder.svg?height=80&width=80",
+      rating: 5,
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, InvestPro",
+      company: "FinTech",
+      quote:
+        "The trading platform they built exceeded all expectations. Sub-second execution times and robust security have made us industry leaders.",
+      image: "/placeholder.svg?height=80&width=80",
+      rating: 5,
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Founder, RetailMax",
+      company: "E-commerce",
+      quote:
+        "Our sales tripled after launching the new platform. The AI recommendations and seamless UX have transformed our business.",
+      image: "/placeholder.svg?height=80&width=80",
+      rating: 5,
+    },
+  ],
+  cta: {
+    title: "Ready to Create Your Success Story?",
+    description:
+      "Let's discuss your project and explore how we can bring your vision to life.",
+    primaryButton: {
+      text: "Start Your Project",
+      href: "/contact",
+    },
+    secondaryButton: {
+      text: "View Our Services",
+      href: "/services",
+    },
+  },
+};
