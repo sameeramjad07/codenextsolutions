@@ -13,8 +13,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { industriesData } from "@/lib/data/industries";
 
-export default function IndustryPage({ params }: { params: { slug: string } }) {
-  const industry = industriesData[params.slug as keyof typeof industriesData];
+// Define the props type explicitly
+type IndustryPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function IndustryPage({ params }: IndustryPageProps) {
+  // Await the params to resolve the Promise
+  const { slug } = await params;
+  const industry = industriesData[slug as keyof typeof industriesData];
 
   if (!industry) {
     notFound();

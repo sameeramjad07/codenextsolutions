@@ -20,8 +20,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { solutionsData } from "@/lib/data/solutions";
 
-export default function SolutionPage({ params }: { params: { slug: string } }) {
-  const solution = solutionsData[params.slug as keyof typeof solutionsData];
+// Define the props type explicitly
+type SolutionsPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function SolutionPage({ params }: SolutionsPageProps) {
+  // Await the params to resolve the Promise
+  const { slug } = await params;
+  const solution = solutionsData[slug as keyof typeof solutionsData];
 
   if (!solution) {
     notFound();
@@ -93,6 +100,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </div>
+        {/* Closing the section properly */}
       </section>
 
       {/* Features & Benefits */}

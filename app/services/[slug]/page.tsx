@@ -20,8 +20,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { servicesData } from "@/lib/data/services";
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = servicesData[params.slug as keyof typeof servicesData];
+// Define the props type explicitly
+type ServicesPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function ServicePage({ params }: ServicesPageProps) {
+  // Await the params to resolve the Promise
+  const { slug } = await params;
+  const service = servicesData[slug as keyof typeof servicesData];
 
   if (!service) {
     notFound();

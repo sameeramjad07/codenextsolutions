@@ -20,13 +20,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { technologiesData } from "@/lib/data/technologies";
 
-export default function TechnologyPage({
+// Define the props type explicitly
+type TechnologiesPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function TechnologyPage({
   params,
-}: {
-  params: { slug: string };
-}) {
-  const technology =
-    technologiesData[params.slug as keyof typeof technologiesData];
+}: TechnologiesPageProps) {
+  // Await the params to resolve the Promise
+  const { slug } = await params;
+  const technology = technologiesData[slug as keyof typeof technologiesData];
 
   if (!technology) {
     notFound();
