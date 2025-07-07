@@ -1663,3 +1663,27 @@ export const solutionsData = {
     ],
   },
 };
+
+export const solutionCategories = [
+  {
+    id: "strategy",
+    name: "Strategy & Transformation",
+    description: "Strategic consulting and digital transformation services",
+    icon: "Zap",
+    solutions: ["digital-transformation"],
+  },
+  {
+    id: "consulting",
+    name: "IT Consulting",
+    description: "Technology consulting and advisory services",
+    icon: "Settings",
+    solutions: ["it-consulting"],
+  },
+  {
+    id: "support",
+    name: "Managed Services",
+    description: "Ongoing IT support and management services",
+    icon: "Shield",
+    solutions: ["managed-services"],
+  },
+];
