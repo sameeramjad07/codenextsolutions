@@ -12,6 +12,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+import { navbarData } from "@/lib/data/navbar";
+
+const { services, industries, solutions, technologies } = navbarData;
+
 const servicesData = {
   "Software Development": [
     "Custom Software Development",
@@ -211,7 +215,7 @@ export default function Navbar() {
     columns = 3,
   }: {
     title: string;
-    data: Record<string, string[]>;
+    data: Record<string, { name: string; href: string }[]>;
     columns?: number;
   }) => (
     <Dialog>
@@ -238,16 +242,12 @@ export default function Navbar() {
                 </h3>
                 <ul className="space-y-2">
                   {items.map((item) => (
-                    <li key={item}>
+                    <li key={item.name}>
                       <Link
-                        href={`/${title
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}/${item
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
+                        href={item.href}
                         className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
                       >
-                        {item}
+                        {item.name}
                       </Link>
                     </li>
                   ))}
@@ -303,16 +303,12 @@ export default function Navbar() {
               About
             </Link>
 
-            <MegaDropdown title="Services" data={servicesData} columns={3} />
-            <MegaDropdown
-              title="Industries"
-              data={industriesData}
-              columns={3}
-            />
-            <MegaDropdown title="Solutions" data={solutionsData} columns={3} />
+            <MegaDropdown title="Services" data={services} columns={3} />
+            <MegaDropdown title="Industries" data={industries} columns={3} />
+            <MegaDropdown title="Solutions" data={solutions} columns={3} />
             <MegaDropdown
               title="Technologies"
-              data={technologiesData}
+              data={technologies}
               columns={3}
             />
 

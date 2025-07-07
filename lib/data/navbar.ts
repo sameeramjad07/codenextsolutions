@@ -20,7 +20,7 @@ export const navbarData = {
       { name: "Legacy System Migration", href: "/services/legacy-migration" },
       {
         name: "API Development & Integration",
-        href: "/services/api-development",
+        href: "/services/api-development-integration",
       },
       { name: "Microservices Architecture", href: "/services/microservices" },
     ],
@@ -88,7 +88,7 @@ export const navbarData = {
       },
       {
         name: "Medical Devices & Diagnostics",
-        href: "/industries/medical-devices",
+        href: "/industries/medical-devices-diagnostics",
       },
       {
         name: "Medical Laboratories",
@@ -164,11 +164,11 @@ export const navbarData = {
     "Digital Transformation": [
       {
         name: "Business Process Automation",
-        href: "/solutions/process-automation",
+        href: "/solutions/business-process-automation",
       },
       {
         name: "Digital Strategy Consulting",
-        href: "/solutions/digital-strategy",
+        href: "/solutions/digital-strategy-consulting",
       },
       { name: "Technology Roadmapping", href: "/solutions/technology-roadmap" },
       { name: "Change Management", href: "/solutions/change-management" },

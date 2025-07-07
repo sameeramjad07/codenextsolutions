@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  ArrowRight,
+  ArrowDown,
   ExternalLink,
   Star,
   CheckCircle,
@@ -123,76 +123,82 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Parallax */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Parallax Background */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
-          style={{
-            transform: `translateY(${
-              typeof window !== "undefined" ? window.scrollY * 0.5 : 0
-            }px)`,
-          }}
-        />
-
-        {/* Animated Background Elements */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full animate-pulse" />
-          <div className="absolute top-40 right-20 w-24 h-24 bg-purple-400/20 rounded-full animate-bounce" />
-          <div className="absolute bottom-40 left-20 w-20 h-20 bg-indigo-400/20 rounded-full animate-ping" />
-          <div className="absolute bottom-20 right-10 w-28 h-28 bg-pink-400/20 rounded-full animate-pulse" />
+          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/90 to-indigo-900/90" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">
-            {portfolioData.hero.title}
-          </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-8 text-blue-200 animate-fade-in-up">
-            {portfolioData.hero.subtitle}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 animate-fade-in-up">
-            {portfolioData.hero.description}
-          </p>
+        {/* Animated Background Particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 2}s`,
+              }}
+            />
+          ))}
+        </div>
 
-          {/* Animated Stats */}
-          <div
-            id="hero-stats"
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
-          >
-            {portfolioData.hero.stats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="text-4xl sm:text-5xl font-bold mb-2">
-                  {stat.number.includes("+") || stat.number.includes("%")
-                    ? stat.number
-                    : `${counters[stat.label]}${stat.number.replace(
-                        /[0-9]/g,
-                        ""
-                      )}`}
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <Badge className="mb-6 bg-blue-500/20 text-blue-200 border-blue-400/30 hover:bg-blue-500/30">
+              Our Work
+            </Badge>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+              Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400">
+                {" "}
+                Portfolio
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Discover our journey of innovation through cutting-edge projects
+              that have transformed businesses and created lasting impact across
+              industries.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            {[
+              { number: "100+", label: "Projects Completed" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "15+", label: "Industries Served" },
+              { number: "5+", label: "Years Experience" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                  {stat.number}
                 </div>
-                <div className="text-blue-200">{stat.label}</div>
+                <div className="text-blue-200 text-sm sm:text-base">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
 
+          {/* CTA Button */}
           <Button
-            asChild
             size="lg"
-            className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 text-lg animate-fade-in-up"
+            className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
           >
-            <Link href="#timeline">
-              Explore Our Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            Explore Our Work
+            <ArrowDown className="ml-2 h-5 w-5" />
           </Button>
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
           </div>
         </div>
       </section>
