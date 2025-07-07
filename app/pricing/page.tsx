@@ -20,8 +20,6 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Check, Calculator, Zap, Star, ArrowRight } from "lucide-react";
-import Navbar from "@/components/landing page/navbar";
-import Footer from "@/components/landing page/footer";
 import Link from "next/link";
 
 const pricingPlans = [
@@ -173,7 +171,6 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -604,7 +601,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }
