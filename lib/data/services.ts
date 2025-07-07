@@ -3367,3 +3367,38 @@ export const servicesData = {
     ],
   },
 };
+
+export const serviceCategories = [
+  {
+    id: "development",
+    name: "Development",
+    description: "Custom software and application development services",
+    icon: "Code2",
+    services: [
+      "custom-software-development",
+      "web-development",
+      "mobile-app-development",
+    ],
+  },
+  {
+    id: "ai-ml",
+    name: "AI & Machine Learning",
+    description: "Artificial intelligence and machine learning solutions",
+    icon: "Brain",
+    services: ["ai-ml-solutions"],
+  },
+  {
+    id: "infrastructure",
+    name: "Infrastructure",
+    description: "Cloud and DevOps infrastructure services",
+    icon: "Cloud",
+    services: ["cloud-devops"],
+  },
+  {
+    id: "design",
+    name: "Design",
+    description: "User experience and interface design services",
+    icon: "Palette",
+    services: ["ui-ux-design"],
+  },
+];
