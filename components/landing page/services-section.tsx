@@ -23,42 +23,42 @@ const services = [
     title: "Custom Software Development",
     description:
       "Tailored software solutions built from the ground up to meet your unique business requirements and scale with your growth.",
-    href: "/services/custom-software",
+    href: "/services/custom-software-development",
   },
   {
     icon: Globe,
     title: "Web & Mobile App Development",
     description:
       "Modern, responsive web applications and native mobile apps that deliver exceptional user experiences across all platforms.",
-    href: "/services/web-mobile",
+    href: "/services/cross-platform",
   },
   {
     icon: Brain,
     title: "AI & Data Solutions",
     description:
       "Harness the power of artificial intelligence and machine learning to unlock insights and automate complex processes.",
-    href: "/services/ai-data",
+    href: "/services/artificial-intelligence",
   },
   {
     icon: Cloud,
     title: "Cloud & DevOps Services",
     description:
       "Scalable cloud infrastructure and streamlined deployment pipelines that ensure reliability and performance.",
-    href: "/services/cloud-devops",
+    href: "/services/devops",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description:
       "Beautiful, intuitive interfaces designed with your users in mind, creating engaging digital experiences.",
-    href: "/services/ui-ux",
+    href: "/services/ux-design",
   },
   {
     icon: Smartphone,
     title: "Digital Transformation",
     description:
       "Complete digital transformation strategies that modernize your business processes and drive innovation.",
-    href: "/services/digital-transformation",
+    href: "/solutions/business-process-automation",
   },
 ];
 

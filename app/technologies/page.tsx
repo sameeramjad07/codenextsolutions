@@ -41,7 +41,7 @@ export default function TechnologiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-48 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">

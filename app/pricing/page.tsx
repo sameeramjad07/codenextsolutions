@@ -172,7 +172,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-48 pb-16">
         <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Transparent Pricing for
@@ -189,7 +189,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -250,7 +250,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Cost Calculator */}
       <section className="py-16 bg-white">

@@ -151,7 +151,7 @@ export default function Footer() {
             </div>
 
             {/* Navigation links - spans 6 columns */}
-            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
               {/* Services */}
               <div>
                 <h3 className="text-lg font-semibold text-white mb-6 relative">
@@ -162,19 +162,22 @@ export default function Footer() {
                   {[
                     {
                       name: "Custom Software",
-                      href: "/services/custom-software",
+                      href: "/services/custom-software-development",
                     },
                     {
                       name: "Web Development",
-                      href: "/services/web-development",
+                      href: "/services/fullstack-development",
                     },
                     {
                       name: "Mobile Apps",
-                      href: "/services/mobile-development",
+                      href: "/services/android-development",
                     },
-                    { name: "AI/ML Solutions", href: "/services/ai-ml" },
-                    { name: "Cloud/DevOps", href: "/services/cloud-devops" },
-                    { name: "UI/UX Design", href: "/services/ui-ux" },
+                    {
+                      name: "AI/ML Solutions",
+                      href: "/services/artificial-intelligence",
+                    },
+                    { name: "Cloud/DevOps", href: "/services/cloud-migration" },
+                    { name: "UI/UX Design", href: "/services/ux-design" },
                   ].map((item) => (
                     <li key={item.name}>
                       <Link
@@ -197,8 +200,8 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {[
                     { name: "About Us", href: "/about" },
-                    { name: "Our Team", href: "/about/team" },
-                    { name: "Careers", href: "/about/careers" },
+                    // { name: "Our Team", href: "/about/team" },
+                    // { name: "Careers", href: "/about/careers" },
                     // { name: "Case Studies", href: "/case-studies" },
                     // { name: "Blog", href: "/blog" },
                     { name: "Portfolio", href: "/portfolio" },
@@ -225,12 +228,30 @@ export default function Footer() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    { name: "Healthcare", href: "/industries/healthcare" },
-                    { name: "Finance", href: "/industries/finance" },
-                    { name: "E-commerce", href: "/industries/ecommerce" },
-                    { name: "Education", href: "/industries/education" },
-                    { name: "Logistics", href: "/industries/logistics" },
-                    { name: "Startups", href: "/industries/startups" },
+                    {
+                      name: "Healthcare",
+                      href: "/industries/healthcare-providers",
+                    },
+                    {
+                      name: "Transportation & Logistics",
+                      href: "/industries/transportation-logistics",
+                    },
+                    {
+                      name: "E-commerce",
+                      href: "/industries/ecommerce-platforms",
+                    },
+                    {
+                      name: "Education",
+                      href: "/industries/learning-management",
+                    },
+                    {
+                      name: "Manufacturing",
+                      href: "/industries/manufacturing-execution",
+                    },
+                    {
+                      name: "Travel & Hospitality",
+                      href: "/industries/travel-hospitality",
+                    },
                   ].map((item) => (
                     <li key={item.name}>
                       <Link
@@ -246,7 +267,7 @@ export default function Footer() {
             </div>
 
             {/* Newsletter - spans 2 columns */}
-            <div className="lg:col-span-2">
+            {/* <div className="lg:col-span-2">
               <h3 className="text-lg font-semibold text-white mb-6 relative">
                 Stay Updated
                 <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full" />
@@ -254,9 +275,9 @@ export default function Footer() {
               <p className="text-slate-400 mb-6 leading-relaxed">
                 Get the latest insights, tips, and updates delivered to your
                 inbox.
-              </p>
+              </p> */}
 
-              <form onSubmit={handleSubscribe} className="space-y-4">
+            {/* <form onSubmit={handleSubscribe} className="space-y-4">
                 <div className="relative">
                   <Input
                     type="email"
@@ -286,10 +307,10 @@ export default function Footer() {
                     </>
                   )}
                 </Button>
-              </form>
+              </form> */}
 
-              {/* Newsletter benefits */}
-              <div className="mt-6 space-y-2">
+            {/* Newsletter benefits */}
+            {/* <div className="mt-6 space-y-2">
                 <div className="flex items-center space-x-2 text-sm text-slate-400">
                   <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
                   <span>Weekly tech insights</span>
@@ -302,8 +323,8 @@ export default function Footer() {
                   <div className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
                   <span>No spam, unsubscribe anytime</span>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
 

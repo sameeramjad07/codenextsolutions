@@ -10,14 +10,12 @@ import Footer from "@/components/landing page/footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
       <HeroSection />
       <ServicesSection />
       <AboutSection />
       <TestimonialsSection />
       <PortfolioSection />
       <CTASection />
-      <Footer />
     </main>
   );
 }

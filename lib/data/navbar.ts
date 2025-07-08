@@ -98,16 +98,31 @@ export const navbarData = {
       { name: "Healthcare Payers", href: "/industries/healthcare-payers" },
       { name: "Telemedicine Solutions", href: "/industries/telemedicine" },
     ],
-    Finance: [
-      { name: "Financial Services", href: "/industries/financial-services" },
-      { name: "Banking Solutions", href: "/industries/banking" },
-      { name: "Insurance Technology", href: "/industries/insurance-tech" },
+    "Transportation & Logistics": [
       {
-        name: "Investment Platforms",
-        href: "/industries/investment-platforms",
+        name: "Transportation & Logistics",
+        href: "/industries/transportation-logistics",
       },
-      { name: "FinTech Solutions", href: "/industries/fintech" },
-      { name: "Payment Systems", href: "/industries/payment-systems" },
+      {
+        name: "Fleet Management Solutions",
+        href: "/industries/fleet-management",
+      },
+      {
+        name: "Route Optimization Systems",
+        href: "/industries/route-optimization",
+      },
+      {
+        name: "Warehouse Management",
+        href: "/industries/warehouse-management",
+      },
+      {
+        name: "Freight Tracking Solutions",
+        href: "/industries/freight-tracking",
+      },
+      {
+        name: "Logistics Analytics",
+        href: "/industries/logistics-analytics",
+      },
     ],
     "E-commerce & Retail": [
       { name: "E-commerce Platforms", href: "/industries/ecommerce-platforms" },
@@ -149,10 +164,6 @@ export const navbarData = {
       { name: "Automation Systems", href: "/industries/automation-systems" },
     ],
     "Other Industries": [
-      {
-        name: "Transportation & Logistics",
-        href: "/industries/transportation-logistics",
-      },
       { name: "Real Estate Technology", href: "/industries/real-estate-tech" },
       { name: "Travel & Hospitality", href: "/industries/travel-hospitality" },
       { name: "Energy & Utilities", href: "/industries/energy-utilities" },

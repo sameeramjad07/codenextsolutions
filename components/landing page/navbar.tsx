@@ -4,202 +4,21 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X, Code2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogTitle,
   DialogContent,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 
 import { navbarData } from "@/lib/data/navbar";
 
 const { services, industries, solutions, technologies } = navbarData;
 
-const servicesData = {
-  "Software Development": [
-    "Custom Software Development",
-    "Enterprise Software Solutions",
-    "Software Modernization",
-    "Legacy System Migration",
-    "API Development & Integration",
-    "Microservices Architecture",
-  ],
-  "Web Development": [
-    "Frontend Development",
-    "Backend Development",
-    "Full-Stack Development",
-    "Progressive Web Apps",
-    "E-commerce Development",
-    "CMS Development",
-  ],
-  "Mobile App Development": [
-    "iOS App Development",
-    "Android App Development",
-    "Cross-Platform Development",
-    "React Native Development",
-    "Flutter Development",
-    "Mobile App Testing",
-  ],
-  "AI & Data Solutions": [
-    "Machine Learning",
-    "Artificial Intelligence",
-    "Data Analytics",
-    "Big Data Solutions",
-    "Computer Vision",
-    "Natural Language Processing",
-  ],
-  "Cloud & DevOps": [
-    "Cloud Migration",
-    "AWS Solutions",
-    "Azure Solutions",
-    "Google Cloud Platform",
-    "DevOps Implementation",
-    "Infrastructure as Code",
-  ],
-  "UI/UX Design": [
-    "User Experience Design",
-    "User Interface Design",
-    "Design Systems",
-    "Prototyping",
-    "Usability Testing",
-    "Brand Identity",
-  ],
-};
-
-const industriesData = {
-  Healthcare: [
-    "Healthcare Providers",
-    "Medical Devices & Diagnostics",
-    "Medical Laboratories",
-    "Biotech & Pharma",
-    "Healthcare Payers",
-    "Telemedicine Solutions",
-  ],
-  Finance: [
-    "Financial Services",
-    "Banking Solutions",
-    "Insurance Technology",
-    "Investment Platforms",
-    "FinTech Solutions",
-    "Payment Systems",
-  ],
-  "E-commerce & Retail": [
-    "E-commerce Platforms",
-    "Retail Management",
-    "Inventory Systems",
-    "Point of Sale",
-    "Supply Chain",
-    "Customer Analytics",
-  ],
-  Education: [
-    "Learning Management Systems",
-    "Educational Apps",
-    "Student Information Systems",
-    "Online Course Platforms",
-    "Assessment Tools",
-    "Virtual Classrooms",
-  ],
-  Manufacturing: [
-    "Industrial IoT",
-    "Manufacturing Execution",
-    "Quality Management",
-    "Supply Chain Management",
-    "Predictive Maintenance",
-    "Automation Systems",
-  ],
-  "Other Industries": [
-    "Transportation & Logistics",
-    "Real Estate Technology",
-    "Travel & Hospitality",
-    "Energy & Utilities",
-    "Government Solutions",
-    "Non-Profit Organizations",
-  ],
-};
-
-const solutionsData = {
-  "Digital Transformation": [
-    "Business Process Automation",
-    "Digital Strategy Consulting",
-    "Technology Roadmapping",
-    "Change Management",
-    "Digital Innovation",
-    "Workflow Optimization",
-  ],
-  "IT Consulting": [
-    "Technology Assessment",
-    "Architecture Design",
-    "IT Strategy Planning",
-    "System Integration",
-    "Performance Optimization",
-    "Security Consulting",
-  ],
-  "Managed Services": [
-    "Application Maintenance",
-    "Infrastructure Management",
-    "24/7 Support Services",
-    "Monitoring & Analytics",
-    "Backup & Recovery",
-    "Security Management",
-  ],
-};
-
-const technologiesData = {
-  "Frontend Technologies": [
-    "React.js",
-    "Vue.js",
-    "Angular",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-  ],
-  "Backend Technologies": [
-    ".NET",
-    "Node.js",
-    "Python",
-    "Java",
-    "PHP",
-    "Ruby on Rails",
-  ],
-  "Mobile Technologies": [
-    "React Native",
-    "Flutter",
-    "Swift",
-    "Kotlin",
-    "Xamarin",
-    "Ionic",
-  ],
-  "Cloud Platforms": [
-    "Amazon Web Services",
-    "Microsoft Azure",
-    "Google Cloud Platform",
-    "Digital Ocean",
-    "Heroku",
-    "Vercel",
-  ],
-  Databases: [
-    "PostgreSQL",
-    "MongoDB",
-    "MySQL",
-    "Redis",
-    "Elasticsearch",
-    "Firebase",
-  ],
-  "AI/ML Technologies": [
-    "TensorFlow",
-    "PyTorch",
-    "Scikit-learn",
-    "OpenAI",
-    "Hugging Face",
-    "Computer Vision",
-  ],
-};
-
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -243,35 +62,19 @@ export default function Navbar() {
                 <ul className="space-y-2">
                   {items.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
-                      >
-                        {item.name}
-                      </Link>
+                      <DialogClose asChild>
+                        <Link
+                          href={item.href}
+                          className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
+                        >
+                          {item.name}
+                        </Link>
+                      </DialogClose>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
-          </div>
-
-          <div className="border-t border-gray-200 pt-6">
-            <h3 className="font-medium text-gray-900 mb-4">
-              Find exactly what you need:
-            </h3>
-            <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="Search services, technologies, or solutions..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1"
-              />
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                <Search className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
         </div>
       </DialogContent>

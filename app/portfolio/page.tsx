@@ -123,43 +123,19 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Parallax */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/90 to-indigo-900/90" />
-        </div>
-
-        {/* Animated Background Particles */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-              }}
-            />
-          ))}
-        </div>
-
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <Badge className="mb-6 bg-blue-500/20 text-blue-200 border-blue-400/30 hover:bg-blue-500/30">
-              Our Work
-            </Badge>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <Badge className="mb-6 bg-blue-100 text-blue-800">Our Work</Badge>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
               Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 font-semibold">
                 {" "}
                 Portfolio
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
               Discover our journey of innovation through cutting-edge projects
               that have transformed businesses and created lasting impact across
               industries.
@@ -175,10 +151,10 @@ export default function PortfolioPage() {
               { number: "5+", label: "Years Experience" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-black mb-2">
                   {stat.number}
                 </div>
-                <div className="text-blue-200 text-sm sm:text-base">
+                <div className="text-black text-sm sm:text-base">
                   {stat.label}
                 </div>
               </div>

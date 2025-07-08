@@ -152,80 +152,6 @@ export const industriesData = {
     relatedSolutions: ["digital-transformation", "it-consulting"],
   },
 
-  "financial-services": {
-    id: "financial-services",
-    title: "Financial Services",
-    subtitle: "Secure Financial Technology Solutions",
-    description:
-      "Comprehensive fintech solutions for banks, credit unions, and financial service providers with enterprise-grade security.",
-    hero: {
-      title: "Powering the Future of Financial Services",
-      description:
-        "From core banking systems to digital wallets, we create secure, scalable financial technology solutions.",
-      image: "/placeholder.svg?height=600&width=800",
-      stats: [
-        { number: "$5B+", label: "Transactions Processed" },
-        { number: "20+", label: "Financial Projects" },
-        { number: "100%", label: "Security Compliant" },
-        { number: "99.99%", label: "Transaction Accuracy" },
-      ],
-    },
-    challenges: [
-      {
-        title: "Regulatory Compliance",
-        description:
-          "Meeting strict financial regulations and compliance requirements",
-        solution: "Built-in compliance features and automated reporting",
-      },
-      {
-        title: "Security & Fraud Prevention",
-        description: "Protecting against cyber threats and financial fraud",
-        solution: "Multi-layer security and AI-powered fraud detection",
-      },
-      {
-        title: "Real-time Processing",
-        description: "Handling high-volume transactions with minimal latency",
-        solution: "Optimized architecture and cloud-native solutions",
-      },
-    ],
-    solutions: [
-      {
-        title: "Core Banking Systems",
-        description: "Modern core banking platforms",
-        services: ["custom-software-development", "cloud-devops"],
-        technologies: ["Java", ".NET", "PostgreSQL", "Kubernetes"],
-      },
-      {
-        title: "Digital Banking Apps",
-        description: "Mobile and web banking applications",
-        services: ["mobile-app-development", "web-development"],
-        technologies: ["React Native", "React", "Node.js"],
-      },
-      {
-        title: "Risk Management Systems",
-        description: "AI-powered risk assessment and compliance",
-        services: ["ai-ml-solutions", "data-analytics"],
-        technologies: ["Python", "TensorFlow", "Redis"],
-      },
-    ],
-    caseStudies: [
-      {
-        title: "Digital Banking Platform",
-        client: "Community Bank",
-        description: "Complete digital banking transformation",
-        results: ["300% user growth", "50% cost reduction", "99.9% uptime"],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
-    relatedServices: [
-      "custom-software-development",
-      "ai-ml-solutions",
-      "web-development",
-    ],
-    relatedTechnologies: ["java", "nodejs", "postgresql", "redis"],
-    relatedSolutions: ["digital-transformation", "security-consulting"],
-  },
-
   "medical-laboratories": {
     id: "medical-laboratories",
     title: "Medical Laboratories",
@@ -519,306 +445,6 @@ export const industriesData = {
     ],
     relatedTechnologies: ["react", "webrtc", "nodejs", "aws"],
     relatedSolutions: ["digital-transformation", "it-consulting"],
-  },
-
-  banking: {
-    id: "banking",
-    title: "Banking Solutions",
-    subtitle: "Modernizing Banking Operations",
-    description:
-      "Advanced technology solutions for banks to enhance customer experience, security, and efficiency.",
-    hero: {
-      title: "Empowering Banks with Digital Innovation",
-      description:
-        "Transform banking operations with secure, scalable, and customer-centric solutions.",
-      image: "/placeholder.svg?height=600&width=800",
-      stats: [
-        { number: "$10B+", label: "Transactions Processed" },
-        { number: "15+", label: "Banking Projects" },
-        { number: "100%", label: "Regulatory Compliant" },
-        { number: "99.99%", label: "System Reliability" },
-      ],
-    },
-    challenges: [
-      {
-        title: "Customer Experience",
-        description: "Delivering seamless digital banking experiences",
-        solution: "User-friendly mobile and web banking platforms",
-      },
-      {
-        title: "Security Threats",
-        description: "Protecting against cyber threats and data breaches",
-        solution: "Multi-layer security and real-time monitoring",
-      },
-      {
-        title: "Legacy Systems",
-        description: "Modernizing outdated banking infrastructure",
-        solution: "Cloud-native solutions and API integrations",
-      },
-    ],
-    solutions: [
-      {
-        title: "Online Banking Platforms",
-        description: "Modern web and mobile banking solutions",
-        services: ["web-development", "mobile-app-development"],
-        technologies: ["React", "React Native", "Node.js"],
-      },
-      {
-        title: "Core Banking Modernization",
-        description: "Upgrading legacy systems to cloud-native platforms",
-        services: ["custom-software-development", "cloud-devops"],
-        technologies: ["Java", "Kubernetes", "PostgreSQL"],
-      },
-      {
-        title: "Fraud Detection Systems",
-        description: "AI-powered fraud detection and prevention",
-        services: ["ai-ml-solutions", "data-analytics"],
-        technologies: ["Python", "TensorFlow", "Redis"],
-      },
-    ],
-    caseStudies: [
-      {
-        title: "Digital Banking Transformation",
-        client: "National Bank",
-        description: "Modernized banking platform for 1M+ customers",
-        results: [
-          "250% user engagement",
-          "99.9% uptime",
-          "Secure transactions",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
-    relatedServices: [
-      "custom-software-development",
-      "web-development",
-      "ai-ml-solutions",
-    ],
-    relatedTechnologies: ["react", "java", "postgresql", "tensorflow"],
-    relatedSolutions: ["digital-transformation", "security-consulting"],
-  },
-
-  "insurance-tech": {
-    id: "insurance-tech",
-    title: "Insurance Technology",
-    subtitle: "Streamlining Insurance Operations",
-    description:
-      "Innovative technology solutions for insurance providers to optimize claims, underwriting, and customer engagement.",
-    hero: {
-      title: "Transforming Insurance with Technology",
-      description:
-        "Enhance policy management, claims processing, and customer experience with digital solutions.",
-      image: "/placeholder.svg?height=600&width=800",
-      stats: [
-        { number: "5M+", label: "Claims Processed" },
-        { number: "10+", label: "Insurance Clients" },
-        { number: "100%", label: "Compliance" },
-        { number: "99.8%", label: "Processing Accuracy" },
-      ],
-    },
-    challenges: [
-      {
-        title: "Claims Processing",
-        description: "Reducing claims processing time and errors",
-        solution: "Automated claims management systems",
-      },
-      {
-        title: "Customer Retention",
-        description: "Improving customer satisfaction and retention",
-        solution: "Personalized portals and mobile apps",
-      },
-      {
-        title: "Risk Assessment",
-        description: "Accurately assessing and pricing risks",
-        solution: "AI-driven underwriting and analytics",
-      },
-    ],
-    solutions: [
-      {
-        title: "Claims Management Systems",
-        description: "Automated systems for efficient claims processing",
-        services: ["custom-software-development", "cloud-devops"],
-        technologies: ["Java", "PostgreSQL", "AWS"],
-      },
-      {
-        title: "Customer Portals",
-        description: "Engaging portals for policyholders",
-        services: ["web-development", "mobile-app-development"],
-        technologies: ["React", "React Native", "Node.js"],
-      },
-      {
-        title: "Underwriting Analytics",
-        description: "AI-powered risk assessment tools",
-        services: ["ai-ml-solutions", "data-analytics"],
-        technologies: ["Python", "TensorFlow", "MongoDB"],
-      },
-    ],
-    caseStudies: [
-      {
-        title: "Claims Automation Platform",
-        client: "InsureTech Corp.",
-        description: "Automated claims system for 500K+ policies",
-        results: [
-          "35% faster claims",
-          "99% accuracy",
-          "Improved customer satisfaction",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
-    relatedServices: [
-      "custom-software-development",
-      "web-development",
-      "ai-ml-solutions",
-    ],
-    relatedTechnologies: ["java", "react", "postgresql", "tensorflow"],
-    relatedSolutions: ["digital-transformation", "it-consulting"],
-  },
-
-  "investment-platforms": {
-    id: "investment-platforms",
-    title: "Investment Platforms",
-    subtitle: "Empowering Wealth Creation",
-    description:
-      "Scalable and secure solutions for investment platforms to manage portfolios, trading, and client engagement.",
-    hero: {
-      title: "Building Next-Gen Investment Platforms",
-      description:
-        "Enable seamless trading, portfolio management, and investor engagement with advanced technology.",
-      image: "/placeholder.svg?height=600&width=800",
-      stats: [
-        { number: "$2B+", label: "Assets Managed" },
-        { number: "15+", label: "Platform Deployments" },
-        { number: "100%", label: "Regulatory Compliant" },
-        { number: "99.99%", label: "System Uptime" },
-      ],
-    },
-    challenges: [
-      {
-        title: "Portfolio Management",
-        description: "Managing diverse investment portfolios efficiently",
-        solution: "Automated portfolio management tools",
-      },
-      {
-        title: "Market Data Integration",
-        description: "Integrating real-time market data",
-        solution: "API-driven data feeds and analytics",
-      },
-      {
-        title: "Security & Compliance",
-        description: "Ensuring secure transactions and regulatory compliance",
-        solution: "Multi-layer security and compliance features",
-      },
-    ],
-    solutions: [
-      {
-        title: "Portfolio Management Systems",
-        description: "Tools for managing investment portfolios",
-        services: ["custom-software-development", "cloud-devops"],
-        technologies: ["Java", "PostgreSQL", "AWS"],
-      },
-      {
-        title: "Trading Platforms",
-        description: "Real-time trading and market data solutions",
-        services: ["web-development", "mobile-app-development"],
-        technologies: ["React", "Node.js", "WebSocket"],
-      },
-      {
-        title: "Investor Analytics",
-        description: "AI-driven analytics for investment decisions",
-        services: ["ai-ml-solutions", "data-analytics"],
-        technologies: ["Python", "TensorFlow", "Redis"],
-      },
-    ],
-    caseStudies: [
-      {
-        title: "Wealth Management Platform",
-        client: "InvestSmart LLC",
-        description: "Scalable platform for 100K+ investors",
-        results: ["200% user growth", "99.9% uptime", "Secure transactions"],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
-    relatedServices: [
-      "custom-software-development",
-      "web-development",
-      "ai-ml-solutions",
-    ],
-    relatedTechnologies: ["java", "react", "postgresql", "tensorflow"],
-    relatedSolutions: ["digital-transformation", "security-consulting"],
-  },
-
-  fintech: {
-    id: "fintech",
-    title: "FinTech Solutions",
-    subtitle: "Innovating Financial Technology",
-    description:
-      "Cutting-edge solutions for FinTech startups and enterprises to disrupt the financial industry.",
-    hero: {
-      title: "Driving FinTech Innovation",
-      description:
-        "Build scalable, secure, and user-friendly financial technology solutions for the future.",
-      image: "/placeholder.svg?height=600&width=800",
-      stats: [
-        { number: "25+", label: "FinTech Projects" },
-        { number: "$1B+", label: "Transactions Enabled" },
-        { number: "100%", label: "Security Compliant" },
-        { number: "99.9%", label: "Platform Uptime" },
-      ],
-    },
-    challenges: [
-      {
-        title: "Scalability",
-        description: "Scaling platforms to handle high transaction volumes",
-        solution: "Cloud-native architectures and microservices",
-      },
-      {
-        title: "User Experience",
-        description: "Delivering intuitive and engaging user interfaces",
-        solution: "Modern UI/UX design and development",
-      },
-      {
-        title: "Regulatory Compliance",
-        description: "Navigating complex financial regulations",
-        solution: "Built-in compliance and reporting tools",
-      },
-    ],
-    solutions: [
-      {
-        title: "Payment Gateways",
-        description: "Secure and scalable payment processing systems",
-        services: ["custom-software-development", "cloud-devops"],
-        technologies: ["Node.js", "PostgreSQL", "AWS"],
-      },
-      {
-        title: "Mobile FinTech Apps",
-        description: "User-friendly mobile apps for financial services",
-        services: ["mobile-app-development", "web-development"],
-        technologies: ["React Native", "React", "Node.js"],
-      },
-      {
-        title: "Blockchain Solutions",
-        description: "Blockchain-based financial applications",
-        services: ["blockchain-development", "custom-software-development"],
-        technologies: ["Solidity", "Ethereum", "Node.js"],
-      },
-    ],
-    caseStudies: [
-      {
-        title: "FinTech Startup Platform",
-        client: "PayEasy Solutions",
-        description: "Scalable payment platform for 500K+ users",
-        results: ["300% transaction growth", "99.9% uptime", "Secure payments"],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
-    relatedServices: [
-      "custom-software-development",
-      "mobile-app-development",
-      "blockchain-development",
-    ],
-    relatedTechnologies: ["nodejs", "react", "ethereum", "postgresql"],
-    relatedSolutions: ["digital-transformation", "security-consulting"],
   },
 
   "payment-systems": {
@@ -2316,6 +1942,376 @@ export const industriesData = {
     relatedSolutions: ["digital-transformation", "it-consulting"],
   },
 
+  "fleet-management": {
+    id: "fleet-management",
+    title: "Fleet Management Solutions",
+    subtitle: "Optimizing Fleet Operations",
+    description:
+      "Advanced technology solutions for managing vehicle fleets, improving efficiency, and ensuring real-time visibility.",
+    hero: {
+      title: "Empowering Fleet Operations with Technology",
+      description:
+        "Enhance fleet performance with real-time tracking, maintenance scheduling, and driver management tools.",
+      image: "/placeholder.svg?height=600&width=800",
+      stats: [
+        { number: "25+", label: "Fleet Projects" },
+        { number: "10K+", label: "Vehicles Managed" },
+        { number: "99.8%", label: "Tracking Accuracy" },
+        { number: "100%", label: "Real-time Monitoring" },
+      ],
+    },
+    challenges: [
+      {
+        title: "Fleet Tracking",
+        description:
+          "Monitoring vehicle locations and performance in real-time",
+        solution: "GPS and IoT-enabled tracking systems",
+      },
+      {
+        title: "Maintenance Scheduling",
+        description: "Preventing vehicle downtime with timely maintenance",
+        solution: "Predictive maintenance tools and alerts",
+      },
+      {
+        title: "Driver Management",
+        description: "Optimizing driver performance and safety",
+        solution: "Driver behavior analytics and mobile apps",
+      },
+    ],
+    solutions: [
+      {
+        title: "Fleet Tracking Systems",
+        description: "Real-time tracking for fleet vehicles",
+        services: ["custom-software-development", "iot-solutions"],
+        technologies: ["IoT", "Node.js", "AWS", "PostgreSQL"],
+      },
+      {
+        title: "Predictive Maintenance Tools",
+        description: "AI-driven maintenance scheduling",
+        services: ["ai-ml-solutions", "data-analytics"],
+        technologies: ["Python", "TensorFlow", "MongoDB"],
+      },
+      {
+        title: "Driver Management Apps",
+        description: "Mobile apps for driver performance and communication",
+        services: ["mobile-app-development", "web-development"],
+        technologies: ["React Native", "React", "Node.js"],
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Fleet Management Platform",
+        client: "FleetPro Inc.",
+        description: "Comprehensive fleet solution for 5K+ vehicles",
+        results: ["30% efficiency gain", "99.8% accuracy", "Reduced downtime"],
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+    relatedServices: [
+      "custom-software-development",
+      "iot-solutions",
+      "mobile-app-development",
+    ],
+    relatedTechnologies: ["iot", "nodejs", "python", "react-native"],
+    relatedSolutions: ["digital-transformation", "it-consulting"],
+  },
+
+  "route-optimization": {
+    id: "route-optimization",
+    title: "Route Optimization Systems",
+    subtitle: "Streamlining Delivery Routes",
+    description:
+      "AI-powered solutions for optimizing delivery routes, reducing costs, and improving delivery times.",
+    hero: {
+      title: "Maximizing Efficiency with Route Optimization",
+      description:
+        "Leverage AI and data analytics to plan optimal routes for logistics and transportation.",
+      image: "/placeholder.svg?height=600&width=800",
+      stats: [
+        { number: "20+", label: "Route Optimization Projects" },
+        { number: "50K+", label: "Routes Optimized" },
+        { number: "35%", label: "Cost Reduction" },
+        { number: "99.9%", label: "Route Accuracy" },
+      ],
+    },
+    challenges: [
+      {
+        title: "Route Planning",
+        description: "Creating efficient routes for diverse delivery needs",
+        solution: "AI-driven route optimization algorithms",
+      },
+      {
+        title: "Real-time Adjustments",
+        description: "Adapting routes to traffic and weather conditions",
+        solution: "Real-time data integration and updates",
+      },
+      {
+        title: "Scalability",
+        description: "Handling large-scale route planning",
+        solution: "Cloud-based optimization platforms",
+      },
+    ],
+    solutions: [
+      {
+        title: "Route Optimization Platforms",
+        description: "AI-powered platforms for route planning",
+        services: ["ai-ml-solutions", "custom-software-development"],
+        technologies: ["Python", "TensorFlow", "AWS", "PostgreSQL"],
+      },
+      {
+        title: "Real-time Route Updates",
+        description: "Dynamic route adjustments with live data",
+        services: ["iot-solutions", "data-analytics"],
+        technologies: ["IoT", "Node.js", "MongoDB"],
+      },
+      {
+        title: "Driver Navigation Apps",
+        description: "Mobile apps for real-time driver navigation",
+        services: ["mobile-app-development", "web-development"],
+        technologies: ["React Native", "React", "Node.js"],
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Route Optimization Solution",
+        client: "LogiRoute Co.",
+        description: "Optimized routes for 10K+ deliveries daily",
+        results: ["40% cost savings", "99.9% accuracy", "Faster deliveries"],
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+    relatedServices: [
+      "ai-ml-solutions",
+      "custom-software-development",
+      "mobile-app-development",
+    ],
+    relatedTechnologies: ["python", "tensorflow", "iot", "react-native"],
+    relatedSolutions: ["digital-transformation", "it-consulting"],
+  },
+
+  "warehouse-management": {
+    id: "warehouse-management",
+    title: "Warehouse Management",
+    subtitle: "Optimizing Warehouse Operations",
+    description:
+      "Comprehensive solutions for warehouse management, inventory tracking, and operational efficiency.",
+    hero: {
+      title: "Streamlining Warehouses with Technology",
+      description:
+        "Enhance warehouse efficiency with real-time inventory tracking and automation.",
+      image: "/placeholder.svg?height=600&width=800",
+      stats: [
+        { number: "30+", label: "Warehouse Projects" },
+        { number: "1M+", label: "SKUs Managed" },
+        { number: "99.9%", label: "Inventory Accuracy" },
+        { number: "100%", label: "Real-time Updates" },
+      ],
+    },
+    challenges: [
+      {
+        title: "Inventory Accuracy",
+        description: "Maintaining accurate inventory records",
+        solution: "Real-time tracking with IoT and barcoding",
+      },
+      {
+        title: "Operational Efficiency",
+        description: "Reducing picking and packing errors",
+        solution: "Automated warehouse management systems",
+      },
+      {
+        title: "Scalability",
+        description: "Managing large and dynamic inventory volumes",
+        solution: "Cloud-based warehouse platforms",
+      },
+    ],
+    solutions: [
+      {
+        title: "Warehouse Management Systems",
+        description: "Comprehensive systems for warehouse operations",
+        services: ["custom-software-development", "iot-solutions"],
+        technologies: ["Node.js", "IoT", "AWS", "PostgreSQL"],
+      },
+      {
+        title: "Inventory Analytics",
+        description: "Data-driven insights for inventory optimization",
+        services: ["data-analytics", "ai-ml-solutions"],
+        technologies: ["Python", "TensorFlow", "MongoDB"],
+      },
+      {
+        title: "Warehouse Automation Tools",
+        description: "Automation for picking and packing",
+        services: ["iot-solutions", "custom-software-development"],
+        technologies: ["IoT", "Python", "Node.js"],
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Warehouse Management Platform",
+        client: "StoreTech Solutions",
+        description: "WMS for 500K+ SKUs across 10 warehouses",
+        results: ["50% error reduction", "99.9% accuracy", "Real-time updates"],
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+    relatedServices: [
+      "custom-software-development",
+      "iot-solutions",
+      "data-analytics",
+    ],
+    relatedTechnologies: ["nodejs", "iot", "python", "postgresql"],
+    relatedSolutions: ["digital-transformation", "it-consulting"],
+  },
+
+  "freight-tracking": {
+    id: "freight-tracking",
+    title: "Freight Tracking Solutions",
+    subtitle: "Real-time Freight Visibility",
+    description:
+      "Advanced tracking solutions for freight logistics to ensure transparency and efficiency across supply chains.",
+    hero: {
+      title: "Enhancing Freight Logistics with Real-time Tracking",
+      description:
+        "Provide end-to-end visibility for freight shipments with IoT and GPS technology.",
+      image: "/placeholder.svg?height=600&width=800",
+      stats: [
+        { number: "25+", label: "Freight Projects" },
+        { number: "500K+", label: "Shipments Tracked" },
+        { number: "99.8%", label: "Tracking Accuracy" },
+        { number: "100%", label: "Real-time Visibility" },
+      ],
+    },
+    challenges: [
+      {
+        title: "Freight Visibility",
+        description: "Tracking freight across multiple carriers and regions",
+        solution: "IoT and GPS-enabled tracking systems",
+      },
+      {
+        title: "Data Integration",
+        description: "Integrating with carrier and supply chain systems",
+        solution: "API-driven tracking platforms",
+      },
+      {
+        title: "Security",
+        description: "Ensuring secure data transmission for freight",
+        solution: "End-to-end encryption and secure APIs",
+      },
+    ],
+    solutions: [
+      {
+        title: "Freight Tracking Platforms",
+        description: "Real-time tracking for freight shipments",
+        services: ["custom-software-development", "iot-solutions"],
+        technologies: ["IoT", "Node.js", "AWS", "PostgreSQL"],
+      },
+      {
+        title: "Carrier Integration Tools",
+        description: "Seamless integration with carrier systems",
+        services: ["custom-software-development", "cloud-devops"],
+        technologies: ["Node.js", "MongoDB", "AWS"],
+      },
+      {
+        title: "Freight Analytics",
+        description: "Data-driven insights for freight operations",
+        services: ["data-analytics", "ai-ml-solutions"],
+        technologies: ["Python", "TensorFlow", "MongoDB"],
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Freight Tracking System",
+        client: "FreightMaster Inc.",
+        description: "Tracking solution for 200K+ freight shipments",
+        results: [
+          "40% visibility improvement",
+          "99.8% accuracy",
+          "Real-time tracking",
+        ],
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+    relatedServices: [
+      "custom-software-development",
+      "iot-solutions",
+      "data-analytics",
+    ],
+    relatedTechnologies: ["iot", "nodejs", "python", "postgresql"],
+    relatedSolutions: ["digital-transformation", "it-consulting"],
+  },
+
+  "logistics-analytics": {
+    id: "logistics-analytics",
+    title: "Logistics Analytics",
+    subtitle: "Data-Driven Logistics Insights",
+    description:
+      "Advanced analytics solutions to optimize logistics operations and drive strategic decision-making.",
+    hero: {
+      title: "Unlocking Insights with Logistics Analytics",
+      description:
+        "Leverage data analytics and AI to optimize logistics performance and reduce costs.",
+      image: "/placeholder.svg?height=600&width=800",
+      stats: [
+        { number: "20+", label: "Analytics Projects" },
+        { number: "1M+", label: "Data Points Analyzed" },
+        { number: "99.9%", label: "Data Accuracy" },
+        { number: "100%", label: "Real-time Insights" },
+      ],
+    },
+    challenges: [
+      {
+        title: "Data Integration",
+        description: "Consolidating logistics data from multiple sources",
+        solution: "Unified data platforms and APIs",
+      },
+      {
+        title: "Performance Optimization",
+        description: "Identifying inefficiencies in logistics operations",
+        solution: "AI-driven analytics and predictive models",
+      },
+      {
+        title: "Scalability",
+        description: "Handling large volumes of logistics data",
+        solution: "Cloud-based analytics platforms",
+      },
+    ],
+    solutions: [
+      {
+        title: "Logistics Analytics Platforms",
+        description: "Comprehensive analytics for logistics operations",
+        services: ["data-analytics", "ai-ml-solutions"],
+        technologies: ["Python", "TensorFlow", "AWS", "PostgreSQL"],
+      },
+      {
+        title: "Predictive Analytics Tools",
+        description: "Predictive models for logistics optimization",
+        services: ["ai-ml-solutions", "data-analytics"],
+        technologies: ["Python", "TensorFlow", "MongoDB"],
+      },
+      {
+        title: "Dashboard Solutions",
+        description: "Interactive dashboards for logistics insights",
+        services: ["web-development", "data-analytics"],
+        technologies: ["React", "Node.js", "PostgreSQL"],
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Logistics Analytics Platform",
+        client: "DataLogi Co.",
+        description: "Analytics solution for 500K+ shipments",
+        results: [
+          "30% efficiency gain",
+          "99.9% accuracy",
+          "Real-time insights",
+        ],
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+    relatedServices: ["data-analytics", "ai-ml-solutions", "web-development"],
+    relatedTechnologies: ["python", "tensorflow", "react", "postgresql"],
+    relatedSolutions: ["digital-transformation", "it-consulting"],
+  },
+
   "real-estate-tech": {
     id: "real-estate-tech",
     title: "Real Estate Technology",
@@ -2706,14 +2702,6 @@ export const industriesList = [
     icon: "Heart",
     projects: 15,
     color: "text-emerald-600",
-  },
-  {
-    id: "finance",
-    name: "Finance & FinTech",
-    description: "Secure financial technology and banking solutions",
-    icon: "DollarSign",
-    projects: 12,
-    color: "text-blue-600",
   },
   {
     id: "ecommerce",

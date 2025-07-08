@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import {
   Card,
@@ -39,6 +38,7 @@ import {
   Linkedin,
   Twitter,
   Github,
+  MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -55,41 +55,62 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage("");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        budget: "",
-        timeline: "",
-        message: "",
+    try {
+      // Submit form to Formspree (replace with your Formspree endpoint)
+      const response = await fetch("https://formspree.io/f/mpwrgryo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form. Please try again.");
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          budget: "",
+          timeline: "",
+          message: "",
+        });
+      }, 3000);
+    } catch (error) {
+      setIsSubmitting(false);
+      setErrorMessage(
+        error instanceof Error ? error.message : "An unexpected error occurred."
+      );
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    setErrorMessage(""); // Clear error on input change
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-48 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">
@@ -163,11 +184,17 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      {errorMessage && (
+                        <div className="text-red-600 text-sm mb-4">
+                          {errorMessage}
+                        </div>
+                      )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <Label htmlFor="name">Full Name *</Label>
                           <Input
                             id="name"
+                            name="name"
                             type="text"
                             value={formData.name}
                             onChange={(e) =>
@@ -182,6 +209,7 @@ export default function ContactPage() {
                           <Label htmlFor="email">Email Address *</Label>
                           <Input
                             id="email"
+                            name="email"
                             type="email"
                             value={formData.email}
                             onChange={(e) =>
@@ -199,6 +227,7 @@ export default function ContactPage() {
                           <Label htmlFor="company">Company</Label>
                           <Input
                             id="company"
+                            name="company"
                             type="text"
                             value={formData.company}
                             onChange={(e) =>
@@ -212,6 +241,7 @@ export default function ContactPage() {
                           <Label htmlFor="phone">Phone Number</Label>
                           <Input
                             id="phone"
+                            name="phone"
                             type="tel"
                             value={formData.phone}
                             onChange={(e) =>
@@ -226,6 +256,7 @@ export default function ContactPage() {
                       <div>
                         <Label htmlFor="service">Service Interested In *</Label>
                         <Select
+                          name="service"
                           value={formData.service}
                           onValueChange={(value) =>
                             handleInputChange("service", value)
@@ -266,6 +297,7 @@ export default function ContactPage() {
                         <div>
                           <Label htmlFor="budget">Project Budget</Label>
                           <Select
+                            name="budget"
                             value={formData.budget}
                             onValueChange={(value) =>
                               handleInputChange("budget", value)
@@ -302,6 +334,7 @@ export default function ContactPage() {
                         <div>
                           <Label htmlFor="timeline">Project Timeline</Label>
                           <Select
+                            name="timeline"
                             value={formData.timeline}
                             onValueChange={(value) =>
                               handleInputChange("timeline", value)
@@ -334,6 +367,7 @@ export default function ContactPage() {
                         <Label htmlFor="message">Project Description *</Label>
                         <Textarea
                           id="message"
+                          name="message"
                           value={formData.message}
                           onChange={(e) =>
                             handleInputChange("message", e.target.value)
@@ -376,19 +410,51 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle className="text-xl">Get In Touch</CardTitle>
                   <CardDescription>
-                    Multiple ways to reach our team
+                    Reach us instantly or schedule a call
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <Link
+                      href="https://wa.me/15551234567?text=Hello! I'm interested in discussing a project with CodeNextSolutions."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        className="w-full mb-4 bg-green-600 hover:bg-green-700 text-white"
+                        size="lg"
+                      >
+                        <MessageCircle className="h-5 w-5 mr-2" />
+                        Connect via WhatsApp
+                      </Button>
+                    </Link>
+                    <Link
+                      href="https://calendly.com/proton7ve/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+                        size="lg"
+                      >
+                        <Calendar className="h-5 w-5 mr-2" />
+                        Schedule a Free Consultation
+                      </Button>
+                    </Link>
+                  </div>
+
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="h-5 w-5 text-blue-600" />
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Email Us</h4>
-                      <p className="text-gray-600">
+                      <Link
+                        href="mailto:hello@codenextsolutions.com"
+                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                      >
                         hello@codenextsolutions.com
-                      </p>
+                      </Link>
                       <p className="text-sm text-gray-500">
                         We'll respond within 24 hours
                       </p>
@@ -401,7 +467,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Call Us</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <Link
+                        href="tel:+15551234567"
+                        className="text-gray-600 hover:text-emerald-600 transition-colors"
+                      >
+                        +1 (555) 123-4567
+                      </Link>
                       <p className="text-sm text-gray-500">
                         Mon-Fri, 9AM-6PM PST
                       </p>
@@ -418,25 +489,6 @@ export default function ContactPage() {
                       <p className="text-sm text-gray-500">
                         By appointment only
                       </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Calendar className="h-5 w-5 text-orange-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        Schedule a Call
-                      </h4>
-                      <p className="text-gray-600">Book a free consultation</p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="mt-2 bg-transparent"
-                      >
-                        Schedule Now
-                      </Button>
                     </div>
                   </div>
                 </CardContent>
@@ -488,20 +540,26 @@ export default function ContactPage() {
                 <CardContent>
                   <div className="flex space-x-4">
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/company/codenextsolutions"
                       className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Linkedin className="h-5 w-5 text-blue-600" />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://twitter.com/codenextsolutions"
                       className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center hover:bg-sky-200 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Twitter className="h-5 w-5 text-sky-600" />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://github.com/codenextsolutions"
                       className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github className="h-5 w-5 text-gray-600" />
                     </Link>
