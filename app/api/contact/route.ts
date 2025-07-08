@@ -1,28 +1,20 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === "POST") {
-    try {
-      const {
-        name,
-        email,
-        company,
-        phone,
-        service,
-        budget,
-        timeline,
-        message,
-      } = req.body;
-      // Process data (e.g., save to database, send email via Nodemailer or SendGrid)
-      res.status(200).json({ message: "Form submitted successfully" });
-    } catch (error) {
-      res.status(500).json({ error: "Failed to process form submission" });
-    }
-  } else {
-    res.setHeader("Allow", ["POST"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const { name, email, company, phone, service, budget, timeline, message } =
+      body;
+
+    // Process data (e.g., save to database, send email via Nodemailer or SendGrid)
+    return NextResponse.json(
+      { message: "Form submitted successfully" },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to process form submission" },
+      { status: 500 }
+    );
   }
 }
