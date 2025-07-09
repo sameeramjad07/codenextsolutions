@@ -25,6 +25,15 @@ type ServicesPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  // Assuming servicesData keys are your slugs
+  const slugs = Object.keys(servicesData);
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
+
 export default async function ServicePage({ params }: ServicesPageProps) {
   // Await the params to resolve the Promise
   const { slug } = await params;

@@ -25,10 +25,18 @@ type TechnologiesPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  // Assuming technologiesData keys are your slugs
+  const slugs = Object.keys(technologiesData);
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
+
 export default async function TechnologyPage({
   params,
 }: TechnologiesPageProps) {
-  // Await the params to resolve the Promise
   const { slug } = await params;
   const technology = technologiesData[slug as keyof typeof technologiesData];
 

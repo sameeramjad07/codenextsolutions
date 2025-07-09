@@ -18,6 +18,15 @@ type IndustryPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  // Assuming industriesData keys are your slugs
+  const slugs = Object.keys(industriesData);
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
+
 export default async function IndustryPage({ params }: IndustryPageProps) {
   // Await the params to resolve the Promise
   const { slug } = await params;

@@ -25,6 +25,15 @@ type SolutionsPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  // Assuming solutionsData keys are your slugs
+  const slugs = Object.keys(solutionsData);
+
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
+
 export default async function SolutionPage({ params }: SolutionsPageProps) {
   // Await the params to resolve the Promise
   const { slug } = await params;
