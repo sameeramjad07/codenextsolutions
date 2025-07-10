@@ -84,7 +84,7 @@ export const companyData = {
       "Our experienced leadership team brings together decades of expertise in technology, business strategy, and innovation.",
     members: [
       {
-        name: "Salman Khan",
+        name: "Numan Khan",
         role: "CEO & Founder",
         bio: "5+ years in software development and business strategy.",
         image: "/ceo.png?height=300&width=300",

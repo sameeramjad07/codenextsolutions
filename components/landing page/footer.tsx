@@ -111,7 +111,7 @@ export default function Footer() {
                     <Mail className="h-5 w-5 text-blue-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    Stivemartin741@gmail.com
+                    stivemartin741@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 group">
@@ -135,9 +135,13 @@ export default function Footer() {
               {/* Social links with hover effects */}
               <div className="flex space-x-4 mt-8">
                 {[
-                  { icon: Linkedin, href: "#", color: "hover:bg-blue-600" },
-                  { icon: Twitter, href: "#", color: "hover:bg-sky-500" },
-                  { icon: Github, href: "#", color: "hover:bg-gray-600" },
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/company/code-next-solutions/",
+                    color: "hover:bg-blue-600",
+                  },
+                  // { icon: Twitter, href: "#", color: "hover:bg-sky-500" },
+                  // { icon: Github, href: "#", color: "hover:bg-gray-600" },
                 ].map((social, index) => (
                   <Link
                     key={index}
@@ -335,7 +339,7 @@ export default function Footer() {
               <p className="text-slate-400 text-sm">
                 © 2025 CodeNextSolutions. All rights reserved.
               </p>
-              <div className="flex space-x-6">
+              {/* <div className="flex space-x-6">
                 {[
                   { name: "Privacy Policy", href: "/privacy" },
                   { name: "Terms of Service", href: "/terms" },
@@ -349,7 +353,7 @@ export default function Footer() {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

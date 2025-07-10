@@ -416,7 +416,7 @@ export default function ContactPage() {
                 <CardContent className="space-y-6">
                   <div className="space-y-4">
                     <Link
-                      href="https://wa.me/15551234567?text=Hello! I'm interested in discussing a project with CodeNextSolutions."
+                      href="https://wa.me/923325804606?text=Hello! I'm interested in discussing a project with CodeNextSolutions."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -453,7 +453,7 @@ export default function ContactPage() {
                         href="mailto:hello@codenextsolutions.com"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
-                        hello@codenextsolutions.com
+                        stivemartin741@gmail.com
                       </Link>
                       <p className="text-sm text-gray-500">
                         We'll respond within 24 hours
@@ -471,7 +471,7 @@ export default function ContactPage() {
                         href="tel:+15551234567"
                         className="text-gray-600 hover:text-emerald-600 transition-colors"
                       >
-                        +1 (555) 123-4567
+                        +92-3325804606
                       </Link>
                       <p className="text-sm text-gray-500">
                         Mon-Fri, 9AM-6PM PST
@@ -485,7 +485,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Visit Us</h4>
-                      <p className="text-gray-600">San Francisco, CA</p>
+                      <p className="text-gray-600">
+                        701, Elysium tower <br />
+                        Blue Area, Islamabad, Pakistan
+                      </p>
                       <p className="text-sm text-gray-500">
                         By appointment only
                       </p>
@@ -540,14 +543,14 @@ export default function ContactPage() {
                 <CardContent>
                   <div className="flex space-x-4">
                     <Link
-                      href="https://www.linkedin.com/company/codenextsolutions"
+                      href="https://www.linkedin.com/company/code-next-solutions/"
                       className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Linkedin className="h-5 w-5 text-blue-600" />
                     </Link>
-                    <Link
+                    {/* <Link
                       href="https://twitter.com/codenextsolutions"
                       className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center hover:bg-sky-200 transition-colors"
                       target="_blank"
@@ -562,7 +565,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                     >
                       <Github className="h-5 w-5 text-gray-600" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </CardContent>
               </Card>
