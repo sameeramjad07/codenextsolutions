@@ -23,7 +23,7 @@ export const portfolioData = {
         category: "Technology",
         description:
           "A robust digital signage system for remotely managing content on screens via an Android TV app and a centralized web admin panel, ideal for retail, hospitality, and corporate environments.",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/project.png?height=600&width=800",
         technologies: ["Android", "React", "Node.js", "MongoDB", "WebSocket"],
         results: [
           "Scales to 1000+ screens",
@@ -52,7 +52,7 @@ export const portfolioData = {
         category: "Real Estate",
         description:
           "A next-generation real estate platform for renting, selling, and short-term stays, featuring blockchain-based smart agreements for secure, transparent contracts.",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/project.png?height=600&width=800",
         technologies: ["React", "Node.js", "MongoDB", "Stripe", "Blockchain"],
         results: [
           "100% fraud-free contracts",
@@ -81,7 +81,7 @@ export const portfolioData = {
         category: "E-commerce",
         description:
           "A digital art marketplace enabling artists to showcase, sell, and purchase digital artwork globally with secure transactions and licensing options.",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/project.png?height=600&width=800",
         technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS S3"],
         results: [
           "10,000+ artworks listed",
@@ -110,7 +110,7 @@ export const portfolioData = {
         category: "Hospitality",
         description:
           "A self-service restaurant app allowing users to browse, order, and pour wine using smart machines, with a web admin panel for management.",
-        image: "/placeholder.svg?height=600&width=800",
+        image: "/project.png?height=600&width=800",
         technologies: ["Flutter", "React", "Angular", "Node.js", "MongoDB"],
         results: [
           "50% reduction in staff involvement",
@@ -131,64 +131,64 @@ export const portfolioData = {
           "Admin panel for order and inventory management",
         ],
       },
-      {
-        id: "logistics-platform",
-        year: "2022",
-        title: "Logistics Revolution",
-        client: "LogiTrack",
-        category: "Logistics",
-        description:
-          "End-to-end supply chain management platform with real-time tracking, route optimization, and predictive analytics.",
-        image: "/placeholder.svg?height=600&width=800",
-        technologies: ["Flutter", "Firebase", "Google Maps", "ML", "IoT"],
-        results: [
-          "50% faster deliveries",
-          "30% cost reduction",
-          "95% customer satisfaction",
-          "Real-time tracking",
-        ],
-        theme: {
-          primary: "from-green-500 to-emerald-600",
-          secondary: "bg-green-50",
-          accent: "text-green-600",
-        },
-        features: [
-          "Real-time GPS tracking",
-          "Route optimization",
-          "Inventory management",
-          "Predictive analytics",
-          "Mobile driver app",
-        ],
-      },
-      {
-        id: "manufacturing-iot",
-        year: "2021",
-        title: "Industrial IoT Solution",
-        client: "ManufactureTech",
-        category: "Manufacturing",
-        description:
-          "Smart manufacturing platform with IoT sensors, predictive maintenance, and real-time production monitoring.",
-        image: "/placeholder.svg?height=600&width=800",
-        technologies: ["Python", "IoT", "TensorFlow", "InfluxDB", "Grafana"],
-        results: [
-          "40% reduction in downtime",
-          "30% increase in efficiency",
-          "95% prediction accuracy",
-          "$500K annual savings",
-        ],
-        theme: {
-          primary: "from-gray-500 to-slate-600",
-          secondary: "bg-gray-50",
-          accent: "text-gray-600",
-        },
-        features: [
-          "IoT sensor integration",
-          "Predictive maintenance",
-          "Real-time monitoring",
-          "Production analytics",
-          "Quality control",
-        ],
-      },
+      // {
+      //   id: "logistics-platform",
+      //   year: "2022",
+      //   title: "Logistics Revolution",
+      //   client: "LogiTrack",
+      //   category: "Logistics",
+      //   description:
+      //     "End-to-end supply chain management platform with real-time tracking, route optimization, and predictive analytics.",
+      //   image: "/placeholder.svg?height=600&width=800",
+      //   technologies: ["Flutter", "Firebase", "Google Maps", "ML", "IoT"],
+      //   results: [
+      //     "50% faster deliveries",
+      //     "30% cost reduction",
+      //     "95% customer satisfaction",
+      //     "Real-time tracking",
+      //   ],
+      //   theme: {
+      //     primary: "from-green-500 to-emerald-600",
+      //     secondary: "bg-green-50",
+      //     accent: "text-green-600",
+      //   },
+      //   features: [
+      //     "Real-time GPS tracking",
+      //     "Route optimization",
+      //     "Inventory management",
+      //     "Predictive analytics",
+      //     "Mobile driver app",
+      //   ],
+      // },
+      // {
+      //   id: "manufacturing-iot",
+      //   year: "2021",
+      //   title: "Industrial IoT Solution",
+      //   client: "ManufactureTech",
+      //   category: "Manufacturing",
+      //   description:
+      //     "Smart manufacturing platform with IoT sensors, predictive maintenance, and real-time production monitoring.",
+      //   image: "/placeholder.svg?height=600&width=800",
+      //   technologies: ["Python", "IoT", "TensorFlow", "InfluxDB", "Grafana"],
+      //   results: [
+      //     "40% reduction in downtime",
+      //     "30% increase in efficiency",
+      //     "95% prediction accuracy",
+      //     "$500K annual savings",
+      //   ],
+      //   theme: {
+      //     primary: "from-gray-500 to-slate-600",
+      //     secondary: "bg-gray-50",
+      //     accent: "text-gray-600",
+      //   },
+      //   features: [
+      //     "IoT sensor integration",
+      //     "Predictive maintenance",
+      //     "Real-time monitoring",
+      //     "Production analytics",
+      //     "Quality control",
+      //   ],
+      // },
     ],
   },
   categories: [

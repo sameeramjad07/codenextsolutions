@@ -13,7 +13,7 @@ export const projects = {
       "We developed a robust platform combining an Android TV app with a user-friendly web admin panel. The system leverages Node.js and MongoDB for a scalable backend, with WebSocket for real-time APIs to ensure instant synchronization. Features include a drag-and-drop playlist editor, dynamic scheduling, and real-time device monitoring, all designed for easy deployment in distributed environments.",
     impact:
       "The system revolutionized content management, enabling clients to deploy and manage thousands of screens with 99.9% uptime, reduce content update times by 50%, and generate detailed compliance reports, significantly enhancing audience engagement and operational efficiency.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/project.png?height=600&width=800",
     technologies: ["Android", "React", "Node.js", "MongoDB", "WebSocket"],
     results: [
       "Scales to 1000+ screens seamlessly",
@@ -25,7 +25,7 @@ export const projects = {
       primary: "from-blue-500 to-cyan-600",
       secondary: "bg-blue-50",
       accent: "text-blue-500",
-      DescriptionAccent: "text-blue-500",
+      DescriptionAccent: "text-blue-400",
     },
     features: [
       "Remote screen control via intuitive admin dashboard",
@@ -49,7 +49,7 @@ export const projects = {
       "We built House1 using React for a dynamic frontend, Node.js and MongoDB for a robust backend, and blockchain smart contracts for secure agreements. The platform supports multi-mode listings, document management, and real-time status tracking, with Stripe integration for seamless payments, eliminating the need for third-party legal handling.",
     impact:
       "House1 transformed real estate transactions by eliminating contract fraud through blockchain, reducing agreement processing time by 80%, and supporting over 500 active listings, empowering users with a transparent and efficient platform.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/project.png?height=600&width=800",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Blockchain"],
     results: [
       "100% fraud-free contracts via blockchain",
@@ -60,7 +60,8 @@ export const projects = {
     theme: {
       primary: "from-green-500 to-teal-600",
       secondary: "bg-green-50",
-      accent: "text-green-600",
+      accent: "text-green-500",
+      DescriptionAccent: "text-green-400",
     },
     features: [
       "Multi-mode property listings (rent, sale, short-term)",
@@ -84,7 +85,7 @@ export const projects = {
       "We developed Galax Art using React for an engaging frontend, Node.js and MongoDB for a scalable backend, and Stripe for secure payments. AWS S3 integration enables instant artwork downloads, while features like category-based discovery and licensing options cater to both artists and buyers, fostering a vibrant global marketplace.",
     impact:
       "Galax Art empowered over 10,000 artists to monetize their work, achieved a 90% transaction success rate, and provided instant access to digital art, revolutionizing the digital art market with a focus on accessibility and security.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/project.png?height=600&width=800",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS S3"],
     results: [
       "10,000+ artworks listed by artists",
@@ -95,7 +96,8 @@ export const projects = {
     theme: {
       primary: "from-purple-500 to-pink-600",
       secondary: "bg-purple-50",
-      accent: "text-purple-600",
+      accent: "text-purple-500",
+      DescriptionAccent: "text-purple-400",
     },
     features: [
       "Artist profiles with gallery portfolios",
@@ -119,7 +121,7 @@ export const projects = {
       "We built Molto Vino using Flutter for a cross-platform mobile app, with React and Angular for a robust admin panel, powered by Node.js and MongoDB. Features include smart drink pouring via driver’s license scanning, FaciliKey door entry, and auto-billing, with admin tools for order management, inventory tracking, and push notifications.",
     impact:
       "Molto Vino reduced staff involvement by 50%, processed over 1,000 monthly orders with 99% payment accuracy, and enhanced customer satisfaction through a seamless, tech-driven dining experience.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/project.png?height=600&width=800",
     technologies: ["Flutter", "React", "Angular", "Node.js", "MongoDB"],
     results: [
       "50% reduction in staff involvement",
@@ -131,6 +133,7 @@ export const projects = {
       primary: "from-red-700 to-red-900",
       secondary: "bg-rose-50",
       accent: "text-red-700",
+      DescriptionAccent: "text-red-500",
     },
     features: [
       "Browse and order wine via mobile app",

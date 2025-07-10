@@ -111,7 +111,7 @@ export default function Footer() {
                     <Mail className="h-5 w-5 text-blue-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    hello@codenextsolutions.com
+                    Stivemartin741@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 group">
@@ -119,7 +119,7 @@ export default function Footer() {
                     <Phone className="h-5 w-5 text-emerald-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    +1 (555) 123-4567
+                    +92-332-5804606
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 group">
@@ -127,7 +127,7 @@ export default function Footer() {
                     <MapPin className="h-5 w-5 text-purple-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    San Francisco, CA
+                    701, Elysium tower <br /> Blue Area, Islamabad, Pakistan
                   </span>
                 </div>
               </div>
@@ -333,8 +333,7 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-slate-400 text-sm">
-                © 2024 CodeNextSolutions. All rights reserved. Built with ❤️ in
-                San Francisco.
+                © 2025 CodeNextSolutions. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 {[

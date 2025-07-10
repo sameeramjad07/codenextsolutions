@@ -44,7 +44,7 @@ export default async function ProjectCaseStudy({ params }: PortfolioPageProps) {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className={`pt-24 pb-16 relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br ${project.theme.primary} overflow-hidden`}
+        className={`pt-24 pb-16 relative min-h-[80vh] flex items-center justify-center overflow-hidden`}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -60,16 +60,22 @@ export default async function ProjectCaseStudy({ params }: PortfolioPageProps) {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <Badge className="bg-white/20 text-white border-white/30 px-6 py-2 text-lg font-medium mb-6 backdrop-blur-sm">
+            <Badge
+              className={`bg-white border border-slate-400 px-6 py-2 text-lg font-medium mb-6 backdrop-blur-sm ${project.theme.accent}`}
+            >
               {project.category}
             </Badge>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1
+            className={`text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight ${project.theme.accent}`}
+          >
             {project.title}
           </h1>
 
-          <p className="text-xl sm:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+          <p
+            className={`text-xl sm:text-2xl max-w-4xl mx-auto mb-12 leading-relaxed ${project.theme.DescriptionAccent}`}
+          >
             {project.description}
           </p>
 
@@ -77,7 +83,7 @@ export default async function ProjectCaseStudy({ params }: PortfolioPageProps) {
             <Button
               asChild
               size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+              className={`${project.theme.accent} bg-white hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-300`}
             >
               <Link href="/contact">
                 Start Your Project
@@ -89,7 +95,7 @@ export default async function ProjectCaseStudy({ params }: PortfolioPageProps) {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300 bg-transparent"
+              className={`border-2 ${project.theme.accent} hover:bg-gray-100 hover:text-gray-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-transparent transition-all duration-300`}
             >
               <Link href="#details">View Details</Link>
             </Button>
@@ -163,9 +169,7 @@ export default async function ProjectCaseStudy({ params }: PortfolioPageProps) {
               <Card className="border-0 shadow-2xl overflow-hidden">
                 <div className="relative h-96 lg:h-[500px]">
                   <Image
-                    src={
-                      project.image || "/placeholder.svg?height=500&width=800"
-                    }
+                    src={project.image || "/project.png?height=500&width=800"}
                     alt={project.title}
                     fill
                     className="object-cover"
