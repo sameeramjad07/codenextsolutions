@@ -450,7 +450,7 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium text-gray-900">Email Us</h4>
                       <Link
-                        href="mailto:hello@codenextsolutions.com"
+                        href="mailto:stivemartin741@gmail.com"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
                         stivemartin741@gmail.com
@@ -468,7 +468,7 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium text-gray-900">Call Us</h4>
                       <Link
-                        href="tel:+15551234567"
+                        href="tel:+923325804606"
                         className="text-gray-600 hover:text-emerald-600 transition-colors"
                       >
                         +92-3325804606
