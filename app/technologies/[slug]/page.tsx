@@ -349,37 +349,6 @@ export default async function TechnologyPage({
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build with {technology.name}?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Let's discuss your project requirements and leverage the power of{" "}
-            {technology.name} for your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-purple-600 hover:bg-gray-100"
-            >
-              <Link href="/contact">Start Your Project</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-purple-600 bg-transparent"
-            >
-              <Link href="/services">Explore Services</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

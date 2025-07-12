@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, AlertTriangle, Lightbulb, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { industriesData } from "@/lib/data/industries";
+import { industriesData } from "@/lib/data/newIndustries";
 
 // Define the props type explicitly
 type IndustryPageProps = {
@@ -338,37 +338,6 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-emerald-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your {industry.title.split(" ")[0]} Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss your specific challenges and create industry-tailored
-            solutions that drive results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-            >
-              <Link href="/contact">Get Industry Consultation</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-            >
-              <Link href="/portfolio">View Success Stories</Link>
-            </Button>
           </div>
         </div>
       </section>

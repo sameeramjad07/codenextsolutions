@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { solutionsData } from "@/lib/data/solutions";
+import { solutionsData } from "@/lib/data/newSolutions";
 
 // Define the props type explicitly
 type SolutionsPageProps = {
@@ -61,12 +61,12 @@ export default async function SolutionPage({ params }: SolutionsPageProps) {
               </p>
 
               <div className="flex flex-wrap gap-6 mb-8">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <DollarSign className="h-5 w-5 text-emerald-500 mr-2" />
                   <span className="text-sm text-gray-600">
                     From ${solution.pricing.starting.toLocaleString()}
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">
@@ -235,44 +235,50 @@ export default async function SolutionPage({ params }: SolutionsPageProps) {
         </div>
       </section>
 
-      {/* Investment */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Testimonials Section */}
+      {/* <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Investment Levels
+            Client Testimonials
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Foundation</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${solution.pricing.starting.toLocaleString()}
-                </div>
-                <CardDescription>Essential transformation</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center border-2 border-emerald-500">
-              <CardHeader>
-                <Badge className="mb-2 bg-emerald-500">Recommended</Badge>
-                <CardTitle className="text-lg">Comprehensive</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${solution.pricing.typical.toLocaleString()}
-                </div>
-                <CardDescription>Complete transformation</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Enterprise</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${solution.pricing.enterprise.toLocaleString()}
-                </div>
-                <CardDescription>Full-scale transformation</CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solution.testimonials?.map((testimonial, index) => (
+              <Card key={index}>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 italic leading-relaxed mb-4">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-medium text-gray-900">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.role}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )) || (
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 italic leading-relaxed mb-4">
+                    "This solution transformed our business operations,
+                    delivering exceptional results."
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-medium text-gray-900">John Doe</p>
+                      <p className="text-sm text-gray-600">CEO, Example Corp</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <section className="py-16 bg-slate-50">
@@ -291,37 +297,6 @@ export default async function SolutionPage({ params }: SolutionsPageProps) {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-emerald-100 mb-8">
-            Let's discuss your {solution.title.toLowerCase()} strategy and
-            create a roadmap for success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-emerald-600 hover:bg-gray-100"
-            >
-              <Link href="/contact">Schedule Strategy Session</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent"
-            >
-              <Link href="/pricing">Get Investment Proposal</Link>
-            </Button>
           </div>
         </div>
       </section>

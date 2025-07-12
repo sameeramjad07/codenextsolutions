@@ -469,40 +469,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            {portfolioData.cta.title}
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            {portfolioData.cta.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-            >
-              <Link href={portfolioData.cta.primaryButton.href}>
-                {portfolioData.cta.primaryButton.text}
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-            >
-              <Link href={portfolioData.cta.secondaryButton.href}>
-                {portfolioData.cta.secondaryButton.text}
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

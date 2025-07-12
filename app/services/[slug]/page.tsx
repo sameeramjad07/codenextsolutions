@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { servicesData } from "@/lib/data/services";
+import { servicesData } from "@/lib/data/newServices";
 
 // Define the props type explicitly
 type ServicesPageProps = {
@@ -61,12 +61,12 @@ export default async function ServicePage({ params }: ServicesPageProps) {
               </p>
 
               <div className="flex flex-wrap gap-6 mb-8">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <DollarSign className="h-5 w-5 text-emerald-500 mr-2" />
                   <span className="text-sm text-gray-600">
                     From ${service.pricing.starting.toLocaleString()}
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 text-blue-500 mr-2" />
                   <span className="text-sm text-gray-600">
@@ -234,44 +234,50 @@ export default async function ServicePage({ params }: ServicesPageProps) {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Testimonials Section */}
+      {/* <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Investment Levels
+            Client Testimonials
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Starter</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${service.pricing.starting.toLocaleString()}
-                </div>
-                <CardDescription>Perfect for small projects</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center border-2 border-blue-500">
-              <CardHeader>
-                <Badge className="mb-2 bg-blue-500">Most Popular</Badge>
-                <CardTitle className="text-lg">Professional</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${service.pricing.typical.toLocaleString()}
-                </div>
-                <CardDescription>Ideal for growing businesses</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-lg">Enterprise</CardTitle>
-                <div className="text-3xl font-bold text-gray-900">
-                  ${service.pricing.enterprise.toLocaleString()}
-                </div>
-                <CardDescription>For large-scale solutions</CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {service.testimonials?.map((testimonial, index) => (
+              <Card key={index}>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 italic leading-relaxed mb-4">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-medium text-gray-900">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.role}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )) || (
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 italic leading-relaxed mb-4">
+                    "This solution transformed our business operations,
+                    delivering exceptional results."
+                  </p>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="font-medium text-gray-900">John Doe</p>
+                      <p className="text-sm text-gray-600">CEO, Example Corp</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <section className="py-16 bg-slate-50">
@@ -290,37 +296,6 @@ export default async function ServicePage({ params }: ServicesPageProps) {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-emerald-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss your {service.title.toLowerCase()} needs and create a
-            solution that drives results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-            >
-              <Link href="/contact">Start Your Project</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-            >
-              <Link href="/pricing">Get Detailed Quote</Link>
-            </Button>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X, Code2, Search } from "lucide-react";
+import { ChevronDown, Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,10 +11,31 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { navbarData } from "@/lib/data/navbar";
 
 const { services, industries, solutions, technologies } = navbarData;
+
+type NavItem = {
+  name: string;
+  href: string;
+};
+
+type NestedNavCategory = {
+  name: string;
+  href: string;
+  items: NavItem[];
+};
+
+type MegaDropdownProps = {
+  title: string;
+  data:
+    | Record<string, NestedNavCategory> // services, industries, solutions
+    | Record<string, NavItem[]>; // technologies
+  columns?: number;
+  isTechnologies?: boolean;
+};
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,11 +53,8 @@ export default function Navbar() {
     title,
     data,
     columns = 3,
-  }: {
-    title: string;
-    data: Record<string, { name: string; href: string }[]>;
-    columns?: number;
-  }) => (
+    isTechnologies = false,
+  }: MegaDropdownProps) => (
     <Dialog>
       <DialogTrigger asChild>
         <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
@@ -51,31 +69,63 @@ export default function Navbar() {
             <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           </div>
 
-          <div
-            className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
-          >
-            {Object.entries(data).map(([category, items]) => (
-              <div key={category}>
-                <h3 className="font-semibold text-gray-900 mb-4 text-lg border-b border-gray-200 pb-2">
-                  {category}
-                </h3>
-                <ul className="space-y-2">
-                  {items.map((item) => (
-                    <li key={item.name}>
-                      <DialogClose asChild>
-                        <Link
-                          href={item.href}
-                          className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
-                        >
-                          {item.name}
-                        </Link>
-                      </DialogClose>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {isTechnologies ? (
+            <div
+              className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
+            >
+              {Object.entries(data).map(([category, items]) => (
+                <div key={category}>
+                  <h3 className="font-semibold text-gray-900 mb-4 text-lg border-b border-gray-200 pb-2">
+                    {category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {items.map((item: NavItem) => (
+                      <li key={item.name}>
+                        <DialogClose asChild>
+                          <Link
+                            href={item.href}
+                            className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
+                          >
+                            {item.name}
+                          </Link>
+                        </DialogClose>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
+            >
+              {Object.entries(data).map(([category, categoryData]) => (
+                <DialogClose asChild key={category}>
+                  <Link href={categoryData.href}>
+                    <Card className="hover:shadow-lg transition-shadow duration-300">
+                      <CardHeader>
+                        <CardTitle className="text-lg font-semibold text-gray-900">
+                          {category}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-2">
+                          {categoryData.items.map((item: NavItem) => (
+                            <li
+                              key={item.name}
+                              className="text-gray-600 text-sm"
+                            >
+                              {item.name}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </DialogClose>
+              ))}
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
@@ -113,6 +163,7 @@ export default function Navbar() {
               title="Technologies"
               data={technologies}
               columns={3}
+              isTechnologies={true}
             />
 
             <Link
