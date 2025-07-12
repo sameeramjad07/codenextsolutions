@@ -143,4 +143,48 @@ export const projects = {
       "Admin panel for order, inventory, and notification management",
     ],
   },
+  "3d-football-coach": {
+    id: "3d-football-coach",
+    year: "2025",
+    title: "3D Football Coach",
+    client: "FootballTech Innovations",
+    category: "Sports Technology",
+    description:
+      "An innovative web-based platform designed for football coaches and players to streamline team management, enhance player development, and provide access to a comprehensive library of 3D training materials. The solution integrates a React.js frontend with a Node.js backend, leveraging MongoDB for data management and Cloud Storage for video hosting, enabling seamless performance tracking, camp discovery, and custom training design for clubs, academies, and individual players.",
+    challenge:
+      "Football coaches and players faced challenges in managing team performance, accessing high-quality training resources, and discovering local camps, often relying on fragmented tools that lacked integration, scalability, and engaging content delivery.",
+    solution:
+      "We developed a unified platform with a React.js frontend and Node.js (Express.js) backend, utilizing MongoDB for efficient data handling and Cloud Storage for a library of over 1,000 3D training videos. Key features include player performance dashboards, a nearby camp locator with real-time details, a freemium 3D video library, and a custom training designer for coaches. JWT-based authentication and REST APIs ensure secure and seamless integration, supporting scalability for thousands of users.",
+    impact:
+      "3D Football Coach transformed football training by enabling coaches to track player progress 40% faster, increasing camp registrations by 30%, and providing scalable access to premium training content with 99.9% uptime, inspiring the next generation of football talent.",
+    image: "/project.png?height=600&width=800",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Cloud Storage",
+      "JWT",
+      "REST APIs",
+    ],
+    results: [
+      "Supports 1000+ 3D training videos",
+      "99.9% platform uptime",
+      "40% faster player progress tracking",
+      "30% increase in camp registrations",
+    ],
+    theme: {
+      primary: "from-green-500 to-teal-600",
+      secondary: "bg-green-50",
+      accent: "text-green-500",
+      DescriptionAccent: "text-green-400",
+    },
+    features: [
+      "Player performance tracking with intuitive dashboards",
+      "Nearby football camp locator with real-time registration",
+      "Freemium 3D training video library with 1000+ drills",
+      "Custom training designer for creating and sharing drills",
+      "Membership system for premium content access",
+    ],
+  },
 };

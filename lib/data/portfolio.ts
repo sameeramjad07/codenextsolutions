@@ -131,6 +131,43 @@ export const portfolioData = {
           "Admin panel for order and inventory management",
         ],
       },
+      {
+        id: "3d-football-coach",
+        year: "2025",
+        title: "3D Football Coach",
+        client: "FootballTech Innovations",
+        category: "Sports Technology",
+        description:
+          "A web-based platform designed for football coaches and players to streamline team management, enhance player development, and provide access to high-quality 3D training materials, bridging traditional coaching with modern digital tools.",
+        image: "/project.png?height=600&width=800",
+        technologies: [
+          "React.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Cloud Storage",
+          "JWT",
+          "REST APIs",
+        ],
+        results: [
+          "Supports 1000+ training videos",
+          "99.9% platform uptime",
+          "40% faster player progress tracking",
+          "Increased camp registrations by 30%",
+        ],
+        theme: {
+          primary: "from-green-500 to-teal-600",
+          secondary: "bg-green-50",
+          accent: "text-green-600",
+        },
+        features: [
+          "Player performance tracking with metrics and dashboards",
+          "Nearby football camp locator with real-time details",
+          "3D training video library with freemium access model",
+          "Custom training designer for coaches to create and share drills",
+          "Membership system for premium content and resources",
+        ],
+      },
       // {
       //   id: "logistics-platform",
       //   year: "2022",
