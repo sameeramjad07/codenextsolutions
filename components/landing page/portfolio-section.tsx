@@ -3,42 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { portfolioData } from "@/lib/data/portfolio";
 
-const projects = [
-  {
-    title: "HealthTech Platform",
-    category: "Healthcare",
-    description:
-      "HIPAA-compliant telemedicine platform serving 10,000+ patients",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Node.js", "AWS", "MongoDB"],
-    href: "/case-studies/healthtech-platform",
-  },
-  {
-    title: "FinanceFlow Dashboard",
-    category: "Fintech",
-    description: "Real-time financial analytics dashboard for investment firms",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-    href: "/case-studies/financeflow-dashboard",
-  },
-  {
-    title: "EduPlatform LMS",
-    category: "Education",
-    description: "Comprehensive learning management system for universities",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "GraphQL", "Prisma", "Vercel"],
-    href: "/case-studies/eduplatform-lms",
-  },
-  {
-    title: "LogiTrack Mobile",
-    category: "Logistics",
-    description: "Cross-platform mobile app for supply chain management",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React Native", "Firebase", "Redux", "Maps API"],
-    href: "/case-studies/logitrack-mobile",
-  },
-];
+const projects = portfolioData.timeline.projects;
 
 export default function PortfolioSection() {
   return (
@@ -98,7 +65,10 @@ export default function PortfolioSection() {
                   variant="ghost"
                   className="p-0 h-auto text-blue-600 hover:text-blue-700"
                 >
-                  <Link href={project.href} className="flex items-center">
+                  <Link
+                    href={`/portfolio/${project.id}`}
+                    className="flex items-center"
+                  >
                     View Case Study
                     <ExternalLink className="ml-1 h-4 w-4" />
                   </Link>

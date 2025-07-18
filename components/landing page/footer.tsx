@@ -166,22 +166,22 @@ export default function Footer() {
                   {[
                     {
                       name: "Custom Software",
-                      href: "/services/custom-software-development",
+                      href: "/services/software-development",
                     },
                     {
                       name: "Web Development",
-                      href: "/services/fullstack-development",
+                      href: "/services/web-development",
                     },
                     {
                       name: "Mobile Apps",
-                      href: "/services/android-development",
+                      href: "/services/mobile-app-development",
                     },
                     {
-                      name: "AI/ML Solutions",
-                      href: "/services/artificial-intelligence",
+                      name: "AI/Data Solutions",
+                      href: "/services/ai-data-solutions",
                     },
-                    { name: "Cloud/DevOps", href: "/services/cloud-migration" },
-                    { name: "UI/UX Design", href: "/services/ux-design" },
+                    { name: "Cloud/DevOps", href: "/services/cloud-devops" },
+                    { name: "UI/UX Design", href: "/services/ui-ux-design" },
                   ].map((item) => (
                     <li key={item.name}>
                       <Link
@@ -234,7 +234,7 @@ export default function Footer() {
                   {[
                     {
                       name: "Healthcare",
-                      href: "/industries/healthcare-providers",
+                      href: "/industries/healthcare",
                     },
                     {
                       name: "Transportation & Logistics",
@@ -242,19 +242,15 @@ export default function Footer() {
                     },
                     {
                       name: "E-commerce",
-                      href: "/industries/ecommerce-platforms",
+                      href: "/industries/ecommerce-retail",
                     },
                     {
                       name: "Education",
-                      href: "/industries/learning-management",
+                      href: "/industries/education",
                     },
                     {
                       name: "Manufacturing",
-                      href: "/industries/manufacturing-execution",
-                    },
-                    {
-                      name: "Travel & Hospitality",
-                      href: "/industries/travel-hospitality",
+                      href: "/industries/manufacturing",
                     },
                   ].map((item) => (
                     <li key={item.name}>

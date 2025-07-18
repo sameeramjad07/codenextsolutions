@@ -24,11 +24,11 @@ export const footerData = {
     services: [
       {
         name: "Custom Software",
-        href: "/services/custom-software-development",
+        href: "/services/software-development",
       },
       { name: "Web Development", href: "/services/web-development" },
       { name: "Mobile Apps", href: "/services/mobile-app-development" },
-      { name: "AI/ML Solutions", href: "/services/ai-ml-solutions" },
+      { name: "AI/Data Solutions", href: "/services/ai-data-solutions" },
       { name: "Cloud/DevOps", href: "/services/cloud-devops" },
       { name: "UI/UX Design", href: "/services/ui-ux-design" },
     ],

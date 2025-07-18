@@ -23,42 +23,42 @@ const services = [
     title: "Custom Software Development",
     description:
       "Tailored software solutions built from the ground up to meet your unique business requirements and scale with your growth.",
-    href: "/services/custom-software-development",
+    href: "/services/software-development",
   },
   {
     icon: Globe,
-    title: "Web & Mobile App Development",
+    title: "Web Development",
     description:
-      "Modern, responsive web applications and native mobile apps that deliver exceptional user experiences across all platforms.",
-    href: "/services/cross-platform",
+      "Modern, responsive web applications that deliver exceptional user experiences across all platforms.",
+    href: "/services/web-development",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description:
+      "Develop beautiful, high-performance mobile apps with Flutter and React Native",
+    href: "/services/mobile-app-development",
   },
   {
     icon: Brain,
     title: "AI & Data Solutions",
     description:
       "Harness the power of artificial intelligence and machine learning to unlock insights and automate complex processes.",
-    href: "/services/artificial-intelligence",
+    href: "/services/ai-data-solutions",
   },
   {
     icon: Cloud,
     title: "Cloud & DevOps Services",
     description:
       "Scalable cloud infrastructure and streamlined deployment pipelines that ensure reliability and performance.",
-    href: "/services/devops",
+    href: "/services/cloud-devops",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description:
       "Beautiful, intuitive interfaces designed with your users in mind, creating engaging digital experiences.",
-    href: "/services/ux-design",
-  },
-  {
-    icon: Smartphone,
-    title: "Digital Transformation",
-    description:
-      "Complete digital transformation strategies that modernize your business processes and drive innovation.",
-    href: "/solutions/business-process-automation",
+    href: "/services/ui-ux-design",
   },
 ];
 

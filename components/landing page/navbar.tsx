@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Dialog,
   DialogTitle,
@@ -15,7 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { navbarData } from "@/lib/data/navbar";
 
-const { services, industries, solutions, technologies } = navbarData;
+const { services, industries, solutions } = navbarData;
 
 type NavItem = {
   name: string;
@@ -30,11 +31,8 @@ type NestedNavCategory = {
 
 type MegaDropdownProps = {
   title: string;
-  data:
-    | Record<string, NestedNavCategory> // services, industries, solutions
-    | Record<string, NavItem[]>; // technologies
+  data: Record<string, NestedNavCategory>;
   columns?: number;
-  isTechnologies?: boolean;
 };
 
 export default function Navbar() {
@@ -49,12 +47,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const MegaDropdown = ({
-    title,
-    data,
-    columns = 3,
-    isTechnologies = false,
-  }: MegaDropdownProps) => (
+  const MegaDropdown = ({ title, data, columns = 3 }: MegaDropdownProps) => (
     <Dialog>
       <DialogTrigger asChild>
         <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
@@ -68,64 +61,32 @@ export default function Navbar() {
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
           </div>
-
-          {isTechnologies ? (
-            <div
-              className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
-            >
-              {Object.entries(data).map(([category, items]) => (
-                <div key={category}>
-                  <h3 className="font-semibold text-gray-900 mb-4 text-lg border-b border-gray-200 pb-2">
-                    {category}
-                  </h3>
-                  <ul className="space-y-2">
-                    {items.map((item: NavItem) => (
-                      <li key={item.name}>
-                        <DialogClose asChild>
-                          <Link
-                            href={item.href}
-                            className="text-gray-600 hover:text-blue-600 transition-colors text-sm block py-1"
-                          >
+          <div
+            className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
+          >
+            {Object.entries(data).map(([category, categoryData]) => (
+              <DialogClose asChild key={category}>
+                <Link href={categoryData.href}>
+                  <Card className="hover:shadow-lg transition-shadow duration-300">
+                    <CardHeader>
+                      <CardTitle className="text-lg font-semibold text-gray-900">
+                        {category}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        {categoryData.items.map((item: NavItem) => (
+                          <li key={item.name} className="text-gray-600 text-sm">
                             {item.name}
-                          </Link>
-                        </DialogClose>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div
-              className={`grid grid-cols-1 md:grid-cols-${columns} gap-8 mb-8`}
-            >
-              {Object.entries(data).map(([category, categoryData]) => (
-                <DialogClose asChild key={category}>
-                  <Link href={categoryData.href}>
-                    <Card className="hover:shadow-lg transition-shadow duration-300">
-                      <CardHeader>
-                        <CardTitle className="text-lg font-semibold text-gray-900">
-                          {category}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          {categoryData.items.map((item: NavItem) => (
-                            <li
-                              key={item.name}
-                              className="text-gray-600 text-sm"
-                            >
-                              {item.name}
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </DialogClose>
-              ))}
-            </div>
-          )}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </DialogClose>
+            ))}
+          </div>
         </div>
       </DialogContent>
     </Dialog>
@@ -141,7 +102,15 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Code2 className="h-8 w-8 text-blue-600" />
+            <Image
+              src="/codeNextlogo.svg"
+              alt="CodeNextSolutions Logo"
+              width={80} // Adjust width to fit navbar
+              height={80} // Adjust height to fit navbar
+              className="object-contain"
+              priority // Load logo eagerly for above-the-fold content
+            />
+            {/* <Code2 className="h-8 w-8 text-blue-600" /> */}
             <span className="text-xl font-bold text-gray-900">
               CodeNextSolutions
             </span>
@@ -159,12 +128,12 @@ export default function Navbar() {
             <MegaDropdown title="Services" data={services} columns={3} />
             <MegaDropdown title="Industries" data={industries} columns={3} />
             <MegaDropdown title="Solutions" data={solutions} columns={3} />
-            <MegaDropdown
-              title="Technologies"
-              data={technologies}
-              columns={3}
-              isTechnologies={true}
-            />
+            <Link
+              href="/technologies"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              Technologies
+            </Link>
 
             <Link
               href="/portfolio"

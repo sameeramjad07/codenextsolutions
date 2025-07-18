@@ -238,14 +238,6 @@ export const portfolioData = {
       color: "text-emerald-600",
     },
     {
-      id: "finance",
-      name: "FinTech",
-      description: "Secure financial technology solutions",
-      icon: "DollarSign",
-      count: 12,
-      color: "text-blue-600",
-    },
-    {
       id: "ecommerce",
       name: "E-commerce",
       description: "Scalable online retail platforms",
