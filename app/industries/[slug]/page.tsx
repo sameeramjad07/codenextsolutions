@@ -8,10 +8,19 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, AlertTriangle, Lightbulb, TrendingUp } from "lucide-react";
+import {
+  ArrowRight,
+  AlertTriangle,
+  Lightbulb,
+  TrendingUp,
+  CheckCircle,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { industriesData } from "@/lib/data/newIndustries";
+import { portfolioData } from "@/lib/data/portfolio";
+
+const projects = portfolioData.timeline.projects;
 
 // Define the props type explicitly
 type IndustryPageProps = {
@@ -212,38 +221,54 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             Success Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industry.caseStudies.map((caseStudy, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                <Image
-                  src={caseStudy.image || "/placeholder.svg"}
-                  alt={caseStudy.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover"
-                />
-                <CardHeader>
-                  <CardTitle className="text-xl">{caseStudy.title}</CardTitle>
-                  <CardDescription className="text-blue-600 font-medium">
-                    {caseStudy.client}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{caseStudy.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900">Key Results:</h4>
-                    {caseStudy.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center">
-                        <TrendingUp className="h-4 w-4 text-emerald-500 mr-2" />
-                        <span className="text-sm text-gray-600">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {projects
+              .filter((project) =>
+                industry.relatedProjects?.includes(project.id)
+              )
+              .map((project, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                  <CardHeader>
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <CardDescription className="text-blue-600 font-medium">
+                      {project.client}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-gray-900">Results:</h4>
+                      {project.results.map((result, resultIndex) => (
+                        <div key={resultIndex} className="flex items-center">
+                          <CheckCircle className="h-4 w-4 text-emerald-500 mr-2" />
+                          <span className="text-sm text-gray-600">
+                            {result}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="p-0 h-auto text-blue-600 hover:text-blue-700 mt-4"
+                    >
+                      <Link
+                        href={`/portfolio/${project.id}`}
+                        className="flex items-center"
+                      >
+                        View Case Study
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>
@@ -251,7 +276,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
       {/* Related Services & Technologies */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Related Services */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -274,35 +299,6 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                             .replace(/\b\w/g, (l) => l.toUpperCase())}
                         </span>
                         <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Related Technologies */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Key Technologies
-              </h3>
-              <div className="space-y-4">
-                {industry.relatedTechnologies.map((tech, index) => (
-                  <Card
-                    key={index}
-                    className="hover:shadow-md transition-shadow duration-300"
-                  >
-                    <CardContent className="p-4">
-                      <Link
-                        href={`/technologies/${tech}`}
-                        className="flex items-center justify-between group"
-                      >
-                        <span className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors">
-                          {tech
-                            .replace(/-/g, " ")
-                            .replace(/\b\w/g, (l) => l.toUpperCase())}
-                        </span>
-                        <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-purple-600 transition-colors" />
                       </Link>
                     </CardContent>
                   </Card>

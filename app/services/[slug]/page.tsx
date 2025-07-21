@@ -19,6 +19,9 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { servicesData } from "@/lib/data/newServices";
+import { portfolioData } from "@/lib/data/portfolio";
+
+const projects = portfolioData.timeline.projects;
 
 // Define the props type explicitly
 type ServicesPageProps = {
@@ -201,83 +204,57 @@ export default async function ServicePage({ params }: ServicesPageProps) {
             Success Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {service.caseStudies.map((caseStudy, index) => (
-              <Card key={index} className="overflow-hidden">
-                <Image
-                  src={caseStudy.image || "/placeholder.svg"}
-                  alt={caseStudy.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover"
-                />
-                <CardHeader>
-                  <CardTitle className="text-xl">{caseStudy.title}</CardTitle>
-                  <CardDescription className="text-blue-600 font-medium">
-                    {caseStudy.client}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{caseStudy.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900">Results:</h4>
-                    {caseStudy.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-emerald-500 mr-2" />
-                        <span className="text-sm text-gray-600">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {projects
+              .filter((project) =>
+                service.relatedProjects?.includes(project.id)
+              )
+              .map((project, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover"
+                  />
+                  <CardHeader>
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <CardDescription className="text-blue-600 font-medium">
+                      {project.client}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-gray-900">Results:</h4>
+                      {project.results.map((result, resultIndex) => (
+                        <div key={resultIndex} className="flex items-center">
+                          <CheckCircle className="h-4 w-4 text-emerald-500 mr-2" />
+                          <span className="text-sm text-gray-600">
+                            {result}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="p-0 h-auto text-blue-600 hover:text-blue-700 mt-4"
+                    >
+                      <Link
+                        href={`/portfolio/${project.id}`}
+                        className="flex items-center"
+                      >
+                        View Case Study
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      {/* <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Client Testimonials
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {service.testimonials?.map((testimonial, index) => (
-              <Card key={index}>
-                <CardContent className="pt-6">
-                  <p className="text-gray-600 italic leading-relaxed mb-4">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="font-medium text-gray-900">
-                        {testimonial.author}
-                      </p>
-                      <p className="text-sm text-gray-600">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )) || (
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-gray-600 italic leading-relaxed mb-4">
-                    "This solution transformed our business operations,
-                    delivering exceptional results."
-                  </p>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="font-medium text-gray-900">John Doe</p>
-                      <p className="text-sm text-gray-600">CEO, Example Corp</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-        </div>
-      </section> */}
 
       {/* FAQ */}
       <section className="py-16 bg-slate-50">

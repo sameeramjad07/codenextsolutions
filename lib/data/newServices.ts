@@ -96,21 +96,7 @@ export const servicesData = {
           "Yes, we specialize in modernizing legacy systems and integrating with third-party APIs and services.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Enterprise Software Transformation",
-        client: "GlobalTech Solutions",
-        description:
-          "Developed and modernized an enterprise platform with microservices and cloud integration",
-        results: [
-          "50% efficiency improvement",
-          "Zero downtime migration",
-          "99.9% uptime",
-          "Scalable microservices architecture",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
   "web-development": {
     id: "web-development",
@@ -208,21 +194,7 @@ export const servicesData = {
           "Yes, we ensure mobile-first design and PWA capabilities for cross-device compatibility.",
       },
     ],
-    caseStudies: [
-      {
-        title: "E-commerce & CMS Web Platform",
-        client: "RetailMedia",
-        description:
-          "Developed a multi-vendor e-commerce platform with integrated CMS",
-        results: [
-          "100K+ monthly users",
-          "50% faster content updates",
-          "99.9% uptime",
-          "30% sales increase",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
 
   "mobile-app-development": {
@@ -317,20 +289,7 @@ export const servicesData = {
           "Yes, we manage the entire submission process for both App Store and Google Play.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Cross-Platform Mobile Solution",
-        client: "ConnectApp",
-        description: "Developed a social networking app for iOS and Android",
-        results: [
-          "200K+ downloads",
-          "4.8 average rating",
-          "50% faster development",
-          "99% device compatibility",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
 
   "ai-data-solutions": {
@@ -439,21 +398,7 @@ export const servicesData = {
           "We use rigorous data preprocessing, model validation, and performance monitoring to ensure accuracy.",
       },
     ],
-    caseStudies: [
-      {
-        title: "AI-Powered Retail Analytics",
-        client: "SmartRetail",
-        description:
-          "Integrated AI, computer vision, and big data for retail insights",
-        results: [
-          "95% prediction accuracy",
-          "Real-time analytics",
-          "50% operational efficiency",
-          "90% customer satisfaction",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
 
   "cloud-devops": {
@@ -552,20 +497,7 @@ export const servicesData = {
           "DevOps streamlines collaboration, automates processes, and ensures faster, reliable releases.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Cloud & DevOps Transformation",
-        client: "TechGlobal",
-        description: "Migrated infrastructure to AWS with CI/CD pipelines",
-        results: [
-          "99.9% uptime",
-          "50% faster deployments",
-          "40% cost savings",
-          "Consistent environments",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
 
   "ui-ux-design": {
@@ -662,20 +594,7 @@ export const servicesData = {
           "Yes, we design responsive, platform-agnostic interfaces with brand consistency.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Enterprise UI/UX Overhaul",
-        client: "BrandTech",
-        description: "Redesigned UI/UX with a scalable design system",
-        results: [
-          "50% engagement increase",
-          "95% user satisfaction",
-          "60% faster development",
-          "Consistent branding",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
-    ],
+    relatedProjects: ["digital-signage-system", "3d-football-coach"],
   },
 };
 

@@ -101,19 +101,12 @@ export const solutionsData = {
           "Projects typically take 12-36 weeks, depending on scope and complexity.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Enterprise Digital Transformation",
-        client: "GlobalRetail",
-        description:
-          "Implemented end-to-end digital transformation for a retail chain with 200+ stores",
-        results: [
-          "50% efficiency gain",
-          "80% process automation",
-          "40% online revenue growth",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
+    relatedProjects: [
+      "digital-signage-system",
+      "3d-football-coach",
+      "house1-platform",
+      "galax-art-platform",
+      "molto-vino-app",
     ],
   },
 
@@ -212,19 +205,12 @@ export const solutionsData = {
           "We conduct thorough assessments and stakeholder engagement to align IT strategies with business objectives.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Comprehensive IT Consulting",
-        client: "TechEnterprise",
-        description:
-          "Provided end-to-end IT consulting for a global technology firm",
-        results: [
-          "40% performance improvement",
-          "100% compliance",
-          "Seamless integrations",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
+    relatedProjects: [
+      "digital-signage-system",
+      "3d-football-coach",
+      "house1-platform",
+      "galax-art-platform",
+      "molto-vino-app",
     ],
   },
 
@@ -326,19 +312,12 @@ export const solutionsData = {
           "We provide proactive monitoring, automated backups, and rapid incident response to minimize disruptions.",
       },
     ],
-    caseStudies: [
-      {
-        title: "Enterprise Managed Services",
-        client: "GlobalTech",
-        description:
-          "Delivered comprehensive managed services for a multinational corporation",
-        results: [
-          "99.9% uptime",
-          "50% faster issue resolution",
-          "100% compliance",
-        ],
-        image: "/placeholder.svg?height=300&width=400",
-      },
+    relatedProjects: [
+      "digital-signage-system",
+      "3d-football-coach",
+      "house1-platform",
+      "galax-art-platform",
+      "molto-vino-app",
     ],
   },
 };
