@@ -119,7 +119,7 @@ export default function Footer() {
                     <Phone className="h-5 w-5 text-emerald-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    +92-332-5804606
+                    +1-5878833861
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 group">

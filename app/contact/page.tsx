@@ -416,7 +416,7 @@ export default function ContactPage() {
                 <CardContent className="space-y-6">
                   <div className="space-y-4">
                     <Link
-                      href="https://wa.me/923325804606?text=Hello! I'm interested in discussing a project with CodeNextSolutions."
+                      href="https://wa.me/15878833861?text=Hello! I'm interested in discussing a project with CodeNextSolutions."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -468,10 +468,10 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium text-gray-900">Call Us</h4>
                       <Link
-                        href="tel:+923325804606"
+                        href="tel:+15878833861"
                         className="text-gray-600 hover:text-emerald-600 transition-colors"
                       >
-                        +92-3325804606
+                        +1-5878833861
                       </Link>
                       <p className="text-sm text-gray-500">
                         Mon-Fri, 9AM-6PM PST

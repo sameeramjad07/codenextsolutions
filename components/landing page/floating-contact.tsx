@@ -24,7 +24,7 @@ export default function FloatingContact() {
       >
         {/* WhatsApp */}
         <Link
-          href="https://wa.me/923325804606"
+          href="https://wa.me/15878833861"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 group"
