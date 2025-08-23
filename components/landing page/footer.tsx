@@ -111,7 +111,7 @@ export default function Footer() {
                     <Mail className="h-5 w-5 text-blue-400" />
                   </div>
                   <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
-                    stivemartin741@gmail.com
+                    Numankhan@codenextsoltions.tech
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 group">

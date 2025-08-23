@@ -35,7 +35,7 @@ export default function FloatingContact() {
 
         {/* Email */}
         <Link
-          href="mailto:stivemartin741@gmail.com"
+          href="mailto:Numankhan@codenextsoltions.tech"
           className="flex items-center space-x-3 bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 group"
         >
           <Mail className="h-5 w-5" />

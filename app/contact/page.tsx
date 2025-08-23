@@ -450,10 +450,10 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-medium text-gray-900">Email Us</h4>
                       <Link
-                        href="mailto:stivemartin741@gmail.com"
+                        href="mailto:Numankhan@codenextsoltions.tech"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
-                        stivemartin741@gmail.com
+                        Numankhan@codenextsoltions.tech
                       </Link>
                       <p className="text-sm text-gray-500">
                         We'll respond within 24 hours
